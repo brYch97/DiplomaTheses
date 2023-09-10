@@ -11,6 +11,7 @@
     <Name>SliderComponent</Name>
     <ProjectGuid>f07fafbc-8936-4a4c-8b8c-9ccc6643734b</ProjectGuid>
     <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
+    <PcfBuildMode>production</PcfBuildMode>
   </PropertyGroup>
 
   <PropertyGroup>
