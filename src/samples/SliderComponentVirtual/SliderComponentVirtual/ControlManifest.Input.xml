@@ -2,11 +2,11 @@
 <manifest>
   <control
     namespace="Sample"
-    constructor="SliderComponent"
+    constructor="SliderComponentVirtual"
     version="0.0.1"
-    display-name-key="Sample slider component"
+    display-name-key="Sample virtual slider component"
     description-key="Sample slider component to demonstrate basic PCF features."
-    control-type="standard">
+    control-type="virtual">
     <property name="step"
       display-name-key="Step"
       description-key="Decides by how much the value gets changed when user moves the slider."
@@ -15,14 +15,14 @@
       default-value="1"
       required="false" />
     <property name="min"
-      display-name-key="Step"
+      display-name-key="Minimal value"
       description-key="Minimal number that the slider can set the value to. If not set, the minimal value set on the bound column will be used."
       of-type-group="numbers"
       usage="input"
       required="false" />
     <property name="max"
-      display-name-key="Step"
-      description-key="Maximal number that the slider can set the value to. If not set, the maxiaml value set on the bound column will be used."
+      display-name-key="Maximum value"
+      description-key="Maximum number that the slider can set the value to. If not set, the maximum value set on the bound column will be used."
       of-type-group="numbers"
       usage="input"
       required="false" />
@@ -34,6 +34,8 @@
       required="true" />
     <resources>
       <code path="index.ts" order="1" />
+      <platform-library name="React" version="16.8.6" />
+      <platform-library name="Fluent" version="8.29.0" />
     </resources>
     <type-group name="numbers">
       <type>Decimal</type>
