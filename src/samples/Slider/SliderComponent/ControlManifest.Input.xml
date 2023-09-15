@@ -2,7 +2,7 @@
 <manifest>
   <control
     namespace="Sample"
-    constructor="SliderComponent"
+    constructor="Slider"
     version="0.0.1"
     display-name-key="Sample slider component"
     description-key="Sample slider component to demonstrate basic PCF features."

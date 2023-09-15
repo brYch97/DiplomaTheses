@@ -1,9 +1,9 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { Slider } from "./Slider";
+import { SliderComponent } from "./SliderComponent";
 
-export class SliderComponent implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+export class Slider implements ComponentFramework.StandardControl<IInputs, IOutputs> {
     private _container: HTMLDivElement;
     private _value: number;
     private _notifyOutputChanged: () => void;
@@ -15,7 +15,7 @@ export class SliderComponent implements ComponentFramework.StandardControl<IInpu
         this._notifyOutputChanged = notifyOutputChanged;
     }
     public updateView(context: ComponentFramework.Context<IInputs>): void {
-        ReactDOM.render(React.createElement(Slider, {
+        ReactDOM.render(React.createElement(SliderComponent, {
             value: context.parameters.value.raw as number,
             min: context.parameters.min.raw ?? context.parameters.value.attributes?.MinValue,
             max: context.parameters.max.raw ?? context.parameters.value.attributes?.MaxValue,
