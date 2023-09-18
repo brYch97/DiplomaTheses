@@ -8,8 +8,8 @@
   <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.props" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.props')"/>
   
   <PropertyGroup>
-    <Name>DetailListGrid</Name>
-    <ProjectGuid>bd68c851-4d82-4034-a705-0baa727c72a9</ProjectGuid>
+    <Name>PCF_GoogleMapsGrid</Name>
+    <ProjectGuid>0e07bbbe-f1da-4a81-957b-4af9b76e3a09</ProjectGuid>
     <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
   </PropertyGroup>
 
