@@ -1,0 +1,43 @@
+<manifest>
+  <control
+    namespace="Sample"
+    constructor="Slider"
+    version="0.0.1"
+    display-name-key="Sample slider component"
+    description-key="Sample slider component to demonstrate basic PCF features."
+    control-type="standard">
+    <property name="step"
+      display-name-key="Step"
+      description-key="Decides by how much the value gets changed when user moves the    
+      slider."
+      of-type-group="numbers"
+      usage="input"
+      default-value="1"
+      required="false" />
+    <property name="min"
+      display-name-key="Minimal value"
+      description-key="Minimal number that the slider can set the value to. If not set, the minimal value set on the bound column will be used."
+      of-type-group="numbers"
+      usage="input"
+      required="false" />
+    <property name="max"
+      display-name-key="Maximum value"
+      description-key="Maximum number that the slider can set the value to. If not set, the maximum value set on the bound column will be used."
+      of-type-group="numbers"
+      usage="input"
+      required="false" />
+    <property name="value"
+      display-name-key="Slider value"
+      description-key="A column value that will be bound to the slider."
+      of-type-group="numbers"
+      usage="bound"
+      required="true" />
+    <resources>
+      <code path="index.ts" order="1" />
+    </resources>
+    <type-group name="numbers">
+      <type>Decimal</type>
+      <type>Whole.None</type>
+    </type-group>
+  </control>
+</manifest>
