@@ -2,7 +2,7 @@ import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import * as React from 'react';
 import { Slider } from "./Slider";
 
-export class SliderComponentVirtual implements ComponentFramework.ReactControl<IInputs, IOutputs> {
+export class SliderVirtual implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     private _value: number;
     private _notifyOutputChanged: () => void;
     constructor() {
