@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="Sample" constructor="GoogleMapsGrid" version="0.0.2" display-name-key="GoogleMapsGrid_Display_Key" description-key="GoogleMapsGrid_Desc_Key" control-type="standard"  preview-image="images/gmaps_thumb.png">
-    <!-- dataset node represents a set of entity records on CDS; allow more than one datasets -->
+  <control 
+    namespace="Sample" 
+    constructor="GoogleMapsGrid" 
+    version="0.0.2" 
+    display-name-key="Sample Google Maps grid component" 
+    description-key="Shows records on a map based on the provided geo coordinates." 
+    control-type="standard">
     <data-set 
         name="mapDataSet" 
-        display-name-key="Contacts dataset">
+        display-name-key="Contacts dataset"
+        >
       <property-set 
         name="latitude" 
         display-name-key="Latitude" 
@@ -22,7 +28,7 @@
       <property-set 
         name="name" 
         display-name-key="Primary name field" 
-        description-key="Column containing the record's primary name." 
+        description-key="Column containing the record primary name." 
         of-type="SingleLine.Text" 
         usage="bound" 
         required="true" />

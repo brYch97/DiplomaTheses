@@ -14,6 +14,10 @@
       usage="input"
       default-value="1"
       required="false" />
+      <type-group name="numbers">
+        <type>Decimal</type>
+        <type>Whole.None</type>
+      </type-group>
     <property name="min"
       display-name-key="Minimal value"
       description-key="Minimal number that the slider can set the value to. If not set, the minimal value set on the bound column will be used."
@@ -35,9 +39,5 @@
     <resources>
       <code path="index.ts" order="1" />
     </resources>
-    <type-group name="numbers">
-      <type>Decimal</type>
-      <type>Whole.None</type>
-    </type-group>
   </control>
 </manifest>
