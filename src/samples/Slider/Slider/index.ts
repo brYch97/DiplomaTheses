@@ -20,6 +20,7 @@ export class Slider implements ComponentFramework.StandardControl<IInputs, IOutp
             min: context.parameters.min.raw ?? context.parameters.value.attributes?.MinValue,
             max: context.parameters.max.raw ?? context.parameters.value.attributes?.MaxValue,
             step: context.parameters.step.raw as number,
+            disabled: context.mode.isControlDisabled,
             onChange: (value) => {
                 this._value = value;
                 this._notifyOutputChanged();
