@@ -216,7 +216,7 @@ export class GoogleMapsGrid implements ComponentFramework.StandardControl<IInput
      * i.e. cancelling any pending remote calls, removing listeners, etc.
      */
     public destroy(): void {
-        // Add code to cleanup control if necessary
+        
     }
 
 }

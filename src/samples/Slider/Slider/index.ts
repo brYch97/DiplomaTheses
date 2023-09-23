@@ -1,7 +1,7 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
-import { Slider as SliderComponent } from '@fluentui/react/lib/Slider';
+import { SliderComponent } from "./SliderComponent";
 
 export class Slider implements ComponentFramework.StandardControl<IInputs, IOutputs> {
     private _container: HTMLDivElement;
