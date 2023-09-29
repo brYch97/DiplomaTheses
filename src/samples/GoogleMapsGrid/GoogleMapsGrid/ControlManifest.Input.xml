@@ -4,36 +4,35 @@
     namespace="Sample" 
     constructor="GoogleMapsGrid" 
     version="0.0.2" 
-    display-name-key="Sample Google Maps grid component" 
-    description-key="Shows records on a map based on the provided geo coordinates." 
+    display-name-key="GoogleMapsGrid_Display_Key" 
+    description-key="GoogleMapsGrid_Desc_Key" 
     control-type="standard">
     <data-set 
         name="mapDataSet" 
-        display-name-key="Contacts dataset"
-        >
+        display-name-key="mapDataSet_Display_Key">
       <property-set 
         name="latitude" 
-        display-name-key="Latitude" 
-        description-key="Column containing latitude value." 
+        display-name-key="MapGrid_latField_Display_Key" 
+        description-key="MapGrid_latField_Desc_Key" 
         of-type="FP" 
         usage="bound" 
         required="true" />
       <property-set 
         name="longitude" 
-        display-name-key="Longitude" 
-        description-key="Column containing longitude value." 
+        display-name-key="MapGrid_longField_Display_Key" 
+        description-key="MapGrid_longField_Desc_Key" 
         of-type="FP" 
         usage="bound" 
         required="true" />
       <property-set 
         name="name" 
-        display-name-key="Primary name field" 
-        description-key="Column containing the record primary name." 
+        display-name-key="MapGrid_primaryField_Display_Key" 
+        description-key="MapGrid_primaryField_Desc_Key" 
         of-type="SingleLine.Text" 
         usage="bound" 
         required="true" />
     </data-set>
-    <property name="googleMapsAPIKey" display-name-key="Google Maps API Key" description-key="API key for Google Maps." of-type="SingleLine.Text" usage="input" required="true"  />
+    <property name="googleMapsAPIKey" display-name-key="MapGrid_googleMapsAPIKey_Display_Key" description-key="MapGrid_googleMapsAPIKey_Desc_Key" of-type="SingleLine.Text" usage="input" required="true"  />
     <resources>
       <code path="index.ts" order="1"/>
       <css path="css/GoogleMapsGrid.css" order="1" />

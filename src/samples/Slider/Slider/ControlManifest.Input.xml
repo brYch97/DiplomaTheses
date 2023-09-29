@@ -37,8 +37,8 @@
       required="true" />
     <resources>
       <code path="index.ts" order="1" />
-      <resx path="strings/Slider.1033.resx" version="1.0.0" />
-      <resx path="strings/Slider.1029.resx" version="1.0.0" />
+      <resx path="localization/translations.1029.resx" version="1.0.0" />
+      <resx path="localization/translations.1033.resx" version="1.0.0" />
     </resources>
   </control>
 </manifest>
