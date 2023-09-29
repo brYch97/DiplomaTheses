@@ -1,7 +1,3 @@
-
-    /**
-     * export interface for the Power Apps Controls (Standard)
-     */
     export interface StandardControl<TInputs, TOutputs> {
         /**
          * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.

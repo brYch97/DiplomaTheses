@@ -18,6 +18,13 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+
+    <data name="Sample_slider_component_Display_Key" xml:space="preserve">
+      <value>Slider</value>
+    </data>
+    <data name="Sample_slider_component_Desc_Key" xml:space="preserve">
+      <value>Sample field component</value>
+    </data>
     
     <data name="Step_Display_Key" xml:space="preserve">
     <value>Step</value>

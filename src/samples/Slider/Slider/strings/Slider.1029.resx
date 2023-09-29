@@ -18,6 +18,12 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="Sample_slider_component_Display_Key" xml:space="preserve">
+      <value>Posuvník</value>
+    </data>
+    <data name="Sample_slider_component_Desc_Key" xml:space="preserve">
+      <value>Ukázková field komponenta</value>
+    </data>
      <data name="Step_Display_Key" xml:space="preserve">
     <value>Krok</value>
   </data>
@@ -48,5 +54,4 @@
   <data name="Slider_value_Desc_Key" xml:space="preserve">
     <value>Hodnota sloupce, která bude vázána na posuvník.</value>
   </data>
-</root>
 </root>
