@@ -1884,6 +1884,8 @@
                  */
                 totalResultCount: number;
 
+                pageNumber: number;
+
                 /**
                  * The number of the first page to retrieve
                  */
