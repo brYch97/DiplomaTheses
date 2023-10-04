@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <xsd:schema id="root"
+        xmlns=""
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+
+    <data name="Sample_slider_component_Display_Key" xml:space="preserve">
+      <value>Slider</value>
+    </data>
+    <data name="Sample_slider_component_Desc_Key" xml:space="preserve">
+      <value>Sample field component</value>
+    </data>
+    
+    <data name="Step_Display_Key" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="Step_Desc_Key" xml:space="preserve">
+    <value>Decides by how much the value gets changed when the user moves the slider.</value>
+  </data>
+
+  <!-- Minimal Value Property -->
+  <data name="Minimal_value_Display_Key" xml:space="preserve">
+    <value>Minimal value</value>
+  </data>
+  <data name="Minimal_value_Desc_Key" xml:space="preserve">
+    <value>Minimal number that the slider can set the value to. If not set, the minimal value set on the bound column will be used.</value>
+  </data>
+
+  <!-- Maximum Value Property -->
+  <data name="Maximum_value_Display_Key" xml:space="preserve">
+    <value>Maximum value</value>
+  </data>
+  <data name="Maximum_value_Desc_Key" xml:space="preserve">
+    <value>Maximum number that the slider can set the value to. If not set, the maximum value set on the bound column will be used.</value>
+  </data>
+
+  <!-- Slider Value Property -->
+  <data name="Slider_value_Display_Key" xml:space="preserve">
+    <value>Slider value</value>
+  </data>
+  <data name="Slider_value_Desc_Key" xml:space="preserve">
+    <value>A column value that will be bound to the slider.</value>
+  </data>
+</root>

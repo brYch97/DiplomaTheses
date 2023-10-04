@@ -21,12 +21,14 @@
       display-name-key="Minimal_value_Display_Key"
       description-key="Minimal_value_Desc_Key"
       of-type-group="numbers"
+      default-value="0"
       usage="input"
       required="false" />
     <property name="max"
       display-name-key="Maximum_value_Display_Key"
       description-key="Maximum_value_Desc_Key"
       of-type-group="numbers"
+      default-value="100"
       usage="input"
       required="false" />
     <property name="value"

@@ -1,8 +1,8 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import * as React from 'react';
-import { Slider } from "./Slider";
+import { SliderComponent } from "./SliderComponent";
 
-export class SliderVirtual implements ComponentFramework.ReactControl<IInputs, IOutputs> {
+export class SliderVirtual implements ComponentFramework.StandardControl<IInputs, IOutputs> {
     private _value: number;
     private _notifyOutputChanged: () => void;
     constructor() {
@@ -12,16 +12,18 @@ export class SliderVirtual implements ComponentFramework.ReactControl<IInputs, I
         this._notifyOutputChanged = notifyOutputChanged;
     }
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-        return React.createElement(Slider, {
+
+        return React.createElement(SliderComponent, {
             value: context.parameters.value.raw as number,
             min: context.parameters.min.raw ?? context.parameters.value.attributes?.MinValue,
             max: context.parameters.max.raw ?? context.parameters.value.attributes?.MaxValue,
             step: context.parameters.step.raw as number,
-            onChange: (value: number) => {
+            disabled: context.mode.isControlDisabled,
+            onChange: (value) => {
                 this._value = value;
                 this._notifyOutputChanged();
             }
-        })
+        });
     }
 
     public getOutputs(): IOutputs {

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <xsd:schema id="root"
+        xmlns=""
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Sample_slider_component_Display_Key" xml:space="preserve">
+      <value>Posuvník</value>
+    </data>
+    <data name="Sample_slider_component_Desc_Key" xml:space="preserve">
+      <value>Ukázková field komponenta</value>
+    </data>
+     <data name="Step_Display_Key" xml:space="preserve">
+    <value>Krok</value>
+  </data>
+  <data name="Step_Desc_Key" xml:space="preserve">
+    <value>Určuje, o kolik se hodnota změní, když uživatel posune posuvník.</value>
+  </data>
+
+  <!-- Minimal Value Property -->
+  <data name="Minimal_value_Display_Key" xml:space="preserve">
+    <value>Minimální hodnota</value>
+  </data>
+  <data name="Minimal_value_Desc_Key" xml:space="preserve">
+    <value>Minimální číslo, které posuvník může nastavit jako hodnotu. Pokud není nastaveno, bude použita minimální hodnota nastavená ve vázaném sloupci.</value>
+  </data>
+
+  <!-- Maximum Value Property -->
+  <data name="Maximum_value_Display_Key" xml:space="preserve">
+    <value>Maximální hodnota</value>
+  </data>
+  <data name="Maximum_value_Desc_Key" xml:space="preserve">
+    <value>Maximální číslo, které posuvník může nastavit jako hodnotu. Pokud není nastaveno, bude použita maximální hodnota nastavená ve vázaném sloupci.</value>
+  </data>
+
+  <!-- Slider Value Property -->
+  <data name="Slider_value_Display_Key" xml:space="preserve">
+    <value>Hodnota posuvníku</value>
+  </data>
+  <data name="Slider_value_Desc_Key" xml:space="preserve">
+    <value>Hodnota sloupce, která bude vázána na posuvník.</value>
+  </data>
+</root>

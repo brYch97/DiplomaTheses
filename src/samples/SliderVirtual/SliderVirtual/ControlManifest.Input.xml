@@ -1,45 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest>
   <control
     namespace="Sample"
     constructor="SliderVirtual"
     version="0.0.1"
-    display-name-key="Sample virtual slider component"
-    description-key="Sample slider component to demonstrate basic PCF features."
+    display-name-key="Sample_slider_component_Display_Key"
+    description-key="Sample_slider_component_Desc_Key"
     control-type="virtual">
     <property name="step"
-      display-name-key="Step"
-      description-key="Decides by how much the value gets changed when user moves the slider."
+      display-name-key="Step_Display_Key"
+      description-key="Step_Desc_Key"
       of-type-group="numbers"
       usage="input"
       default-value="1"
       required="false" />
+      <type-group name="numbers">
+        <type>Decimal</type>
+        <type>Whole.None</type>
+      </type-group>
     <property name="min"
-      display-name-key="Minimal value"
-      description-key="Minimal number that the slider can set the value to. If not set, the minimal value set on the bound column will be used."
+      display-name-key="Minimal_value_Display_Key"
+      description-key="Minimal_value_Desc_Key"
       of-type-group="numbers"
       usage="input"
+      default-value="0"
       required="false" />
     <property name="max"
-      display-name-key="Maximum value"
-      description-key="Maximum number that the slider can set the value to. If not set, the maximum value set on the bound column will be used."
+      display-name-key="Maximum_value_Display_Key"
+      description-key="Maximum_value_Desc_Key"
       of-type-group="numbers"
       usage="input"
+      default-value="100"
       required="false" />
     <property name="value"
-      display-name-key="Slider value"
-      description-key="A column value that will be bound to the slider."
+      display-name-key="Slider_value_Display_Key"
+      description-key="Slider_value_Desc_Key"
       of-type-group="numbers"
       usage="bound"
       required="true" />
     <resources>
       <code path="index.ts" order="1" />
+      <resx path="localization/translations.1029.resx" version="1.0.0" />
+      <resx path="localization/translations.1033.resx" version="1.0.0" />
       <platform-library name="React" version="16.8.6" />
       <platform-library name="Fluent" version="8.29.0" />
     </resources>
-    <type-group name="numbers">
-      <type>Decimal</type>
-      <type>Whole.None</type>
-    </type-group>
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+
   </control>
 </manifest>
