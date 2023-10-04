@@ -12,12 +12,16 @@ export class SliderVirtual implements ComponentFramework.StandardControl<IInputs
         this._notifyOutputChanged = notifyOutputChanged;
     }
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
+        const min = context.parameters.min;
+        const max = context.parameters.max;
+        const step = context.parameters.step;
+        const valueColumnAttributes = context.parameters.value.attributes;
 
         return React.createElement(SliderComponent, {
             value: context.parameters.value.raw as number,
-            min: context.parameters.min.raw ?? context.parameters.value.attributes?.MinValue,
-            max: context.parameters.max.raw ?? context.parameters.value.attributes?.MaxValue,
-            step: context.parameters.step.raw as number,
+            min: min.raw ?? valueColumnAttributes?.MinValue,
+            max: max.raw ?? valueColumnAttributes?.MaxValue,
+            step: step.raw as number,
             disabled: context.mode.isControlDisabled,
             onChange: (value) => {
                 this._value = value;

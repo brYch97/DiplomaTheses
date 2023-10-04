@@ -15,11 +15,16 @@ export class Slider implements ComponentFramework.StandardControl<IInputs, IOutp
         this._notifyOutputChanged = notifyOutputChanged;
     }
     public updateView(context: ComponentFramework.Context<IInputs>): void {
+        const min = context.parameters.min;
+        const max = context.parameters.max;
+        const step = context.parameters.step;
+        const valueColumnAttributes = context.parameters.value.attributes;
+
         ReactDOM.render(React.createElement(SliderComponent, {
             value: context.parameters.value.raw as number,
-            min: context.parameters.min.raw ?? context.parameters.value.attributes?.MinValue,
-            max: context.parameters.max.raw ?? context.parameters.value.attributes?.MaxValue,
-            step: context.parameters.step.raw as number,
+            min: min.raw ?? valueColumnAttributes?.MinValue,
+            max: max.raw ?? valueColumnAttributes?.MaxValue,
+            step: step.raw as number,
             disabled: context.mode.isControlDisabled,
             onChange: (value) => {
                 this._value = value;
