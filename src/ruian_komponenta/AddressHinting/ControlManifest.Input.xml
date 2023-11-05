@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="BRYCH.PCF" constructor="AddressHinting" version="0.0.1" display-name-key="Adresa RÚIAN" description-key="This control can be used for suggesting addresses based on users input." control-type="standard">
+    <property name="base64" display-name-key="fullAddress" description-key="RUIAN in base64" of-type="SingleLine.Text" usage="bound" required="false" />
+    <resources>
+      <code path="index.ts" order="1"/>
+      <resx path="localization/translations.1029.resx" version="1.0.0" />
+      <resx path="localization/translations.1033.resx" version="1.0.0" />
+    </resources>
+    <feature-usage>
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+  </control>
+</manifest>

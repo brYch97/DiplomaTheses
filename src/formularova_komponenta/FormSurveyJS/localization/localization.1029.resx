@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+ <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="theme" xml:space="preserve">
+    <value>Barevná paleta</value>
+    <comment></comment>
+  </data>
+  <data name="convertAI" xml:space="preserve">
+    <value>Strojový převod PDF dokumentu</value>
+    <comment></comment>
+  </data>
+  <data name="uploadPDF" xml:space="preserve">
+    <value>Nahrát PDF dokument</value>
+    <comment></comment>
+  </data>
+  <data name="uploadPending" xml:space="preserve">
+    <value>Prosím vyčkejte na zpracování dokumentu.</value>
+    <comment></comment>
+  </data>
+  <data name="conversionSuccess" xml:space="preserve">
+    <value>Váš dokument byl úspěšně zpracován. Pokračujte zavřením dialogu.</value>
+    <comment></comment>
+  </data>
+  <data name="conversionFail" xml:space="preserve">
+    <value>Poskytnutý dokument nemohl být zpracován. Je pravděpodobně přilíš velký nebo poškozený.</value>
+    <comment></comment>
+  </data>
+  <data name="conversionWarning" xml:space="preserve">
+    <value>Tato operace nahradí aktuální strukturu formuláře. Chcete pokračovat?</value>
+    <comment></comment>
+  </data>
+  <data name="themeSetToDefault" xml:space="preserve">
+    <value>Výchozí</value>
+    <comment></comment>
+  </data>
+  <data name="themeSetToStored" xml:space="preserve">
+    <value>Smazat změny</value>
+    <comment></comment>
+  </data>
+  <data name="loading" xml:space="preserve">
+    <value>Načítání...</value>
+    <comment></comment>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Zrušit</value>
+    <comment></comment>
+  </data>
+  <data name="templateChange" xml:space="preserve">
+    <value>Změnit šablonu</value>
+    <comment></comment>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Varování</value>
+    <comment></comment>
+  </data>
+  <data name="templateWarning" xml:space="preserve">
+    <value>Změna šablony zahodí veškeré neuložené změny v aktuálním formuláři. Chcete pokračovat?</value>
+    <comment></comment>
+  </data>
+   <data name="newTemplateTitle" xml:space="preserve">
+    <value>Nová šablona</value>
+    <comment></comment>
+  </data>
+      <data name="newSurveyTitle" xml:space="preserve">
+    <value>Nový formulář</value>
+    <comment></comment>
+  </data>
+  <data name="toolboxCategoryPredefined" xml:space="preserve">
+    <value>Předpřipravené</value>
+    <comment></comment>
+  </data>
+   <data name="toolboxCategoryTextInput" xml:space="preserve">
+    <value>Textové vstupy</value>
+    <comment></comment>
+  </data>
+   <data name="toolboxCategoryContainer" xml:space="preserve">
+    <value>Kontejnery</value>
+    <comment></comment>
+  </data>
+  <data name="toolboxCategoryMatrix" xml:space="preserve">
+    <value>Matice</value>
+    <comment></comment>
+  </data>
+  <data name="toolboxCategoryChoices" xml:space="preserve">
+    <value>Výběrové vstupy</value>
+    <comment></comment>
+  </data>
+  <data name="toolboxCategoryMisc" xml:space="preserve">
+    <value>Ostatní</value>
+    <comment></comment>
+  </data>
+    <data name="creatorReadOnly" xml:space="preserve">
+    <value>Na aktivním dotazníku nelze provádět změny.</value>
+    <comment></comment>
+  </data>
+    <data name="inputReadOnly" xml:space="preserve">
+    <value>Tento dotazník již nelze dále upravovat.</value>
+    <comment></comment>
+  </data>
+   <data name="saveFirst" xml:space="preserve">
+    <value>Před využitím této funkcionality je nutné dotazník uložit.</value>
+    <comment></comment>
+  </data>
+  <data name="boundedTo" xml:space="preserve">
+    <value>Mapovat na</value>
+    <comment></comment>
+  </data>
+  <data name="customFieldsEditor" xml:space="preserve">
+    <value>Předpřipravená pole</value>
+    <comment></comment>
+  </data>
+</root>

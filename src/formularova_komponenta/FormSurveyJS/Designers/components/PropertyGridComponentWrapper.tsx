@@ -1,0 +1,25 @@
+import * as React from 'react';
+import ThemeDesigner from './ThemeDesigner/ThemeDesigner';
+import { PropertyGridComponent } from 'survey-creator-react';
+import { CustomPropertyGridComponent } from './PropertyGridComponent/CustomPropertyGridComponent';
+import { SurveyManager, SurveyType } from '../../services/SurveyManager';
+import { FormUploadDialog } from './FormUploadDialog/FormUploadDialog';
+
+export const PropertyGridComponentWrapper: React.FC<{ model: any }> = (props) => {
+    return (
+        <>
+            <PropertyGridComponent model={props.model}></PropertyGridComponent>
+            {SurveyManager.SurveyType !== SurveyType.FieldDesigner &&
+                <CustomPropertyGridComponent
+                    title={SurveyManager.LocalizationService.getString('theme')}
+                    onRenderContent={(onDismiss) => <ThemeDesigner onDismiss={onDismiss} />}>
+                </CustomPropertyGridComponent>
+            }
+            {SurveyManager.SurveyType === SurveyType.FormDesigner &&
+                <CustomPropertyGridComponent
+                    title={SurveyManager.LocalizationService.getString('convertAI')}
+                    onRenderContent={(onDismiss) => <FormUploadDialog onDismiss={onDismiss} />} />
+            }
+        </>
+    )
+};

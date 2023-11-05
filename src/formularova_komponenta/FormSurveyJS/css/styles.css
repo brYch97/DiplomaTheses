@@ -1,0 +1,53 @@
+@namespace xlink 'http://www.w3.org/1999/xlink';
+
+[class*="FormSurveyJS"],
+[class*="FormSurveyJS"]>div,
+[class*="FormSurveyJS"]>div>div:last-child{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 0;
+    min-width: 0;
+}
+.sv-list__item .sv-list__item-body:has([xlink|href="#icon-dummy"]) {
+    display: none;
+}
+
+@keyframes FormDesignerUploadFormDialogX {
+    to {
+      transform:translateX(-100%);
+      left:100%;
+    }
+  }
+  
+  @keyframes FormDesignerUploadFormDialogY {
+     33% {
+       clip-path:inset(0 0 0 -100px);    
+     }
+     50% {
+       clip-path:inset(0 0 0 0);    
+     }
+     83%{
+       clip-path:inset(0 -100px 0 0); 
+     }
+  }
+
+div:has(>[role="tabpanel"]):has([class*="svc-creator"]),
+[role="tabpanel"]:has([class*="svc-creator"]),
+[role="tabpanel"]:has([class*="svc-creator"])>div:last-child,
+[role="tabpanel"]:has([class*="svc-creator"])>div:last-child>div:last-child,
+[role="tabpanel"]:has([class*="svc-creator"])>div:last-child>div:last-child>div:last-child,
+[role="tabpanel"]:has([class*="svc-creator"])>div:last-child>div:last-child>div:last-child>div:last-child,
+[role="tabpanel"]:has([class*="svc-creator"])>div:last-child>div:last-child>div:last-child>div:last-child>div:last-child,
+[role="tabpanel"]:has([class*="svc-creator"])>div:last-child>div:last-child>div:last-child>div:last-child>div:last-child>div:last-child,
+[role="tabpanel"]:has([class*="svc-creator"])>div:last-child>div:last-child>div:last-child>div:last-child>div:last-child>div:last-child>div:last-child{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 0;
+    min-width: 0;
+}
+div:has(>[role="tabpanel"]):has([class*="svc-creator"]) {
+    overflow: hidden;
+}
+

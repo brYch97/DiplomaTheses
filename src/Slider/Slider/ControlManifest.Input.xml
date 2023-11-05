@@ -1,0 +1,56 @@
+<manifest>
+  <control
+    namespace="Sample"
+    constructor="Slider"
+    version="0.0.1"
+    display-name-key="Posuvník"
+    description-key="Ukázková field komponenta"
+    control-type="standard">
+    <property name="step"
+      display-name-key="Krok"
+      description-key="Určuje, o kolik se hodnota změní, když uživatel posune posuvník."
+      of-type-group="numbers"
+      usage="input"
+      default-value="1"
+      required="false" />
+    <type-group name="numbers">
+      <type>Decimal</type>
+      <type>Whole.None</type>
+    </type-group>
+    <property name="min"
+      display-name-key="Minimální hodnota"
+      description-key="Minimální číslo, které posuvník může nastavit jako hodnotu. Pokud není nastaveno, bude použita minimální hodnota nastavená ve vázaném sloupci."
+      of-type-group="numbers"
+      usage="input"
+      default-value="0"
+      required="false" />
+    <property name="max"
+      display-name-key="Maximální hodnota"
+      description-key="Maximální číslo, které posuvník může nastavit jako hodnotu. Pokud není nastaveno, bude použita maximální hodnota nastavená ve vázaném sloupci."
+      of-type-group="numbers"
+      usage="input"
+      default-value="100"
+      required="false" />
+    <property name="value"
+      display-name-key="Hodnota posuvníku"
+      description-key="Hodnota sloupce, která bude vázána na posuvník."
+      of-type-group="numbers"
+      usage="bound"
+      required="true" />
+    <resources>
+      <code path="index.ts" order="1" />
+      <resx path="localization/translations.1029.resx" version="1.0.0" />
+      <resx path="localization/translations.1033.resx" version="1.0.0" />
+    </resources>
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+  </control>
+</manifest>

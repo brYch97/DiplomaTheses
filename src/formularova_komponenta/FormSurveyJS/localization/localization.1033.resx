@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+ <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="theme" xml:space="preserve">
+    <value>Color Palette</value>
+    <comment></comment>
+  </data>
+  <data name="convertAI" xml:space="preserve">
+    <value>AI Convert</value>
+    <comment></comment>
+  </data>
+  <data name="uploadPDF" xml:space="preserve">
+    <value>Upload PDF document</value>
+    <comment></comment>
+  </data>
+  <data name="uploadPending" xml:space="preserve">
+    <value>Please wait for the document to be processed.</value>
+    <comment></comment>
+  </data>
+  <data name="conversionSuccess" xml:space="preserve">
+    <value>Your document has been successfuly processed. Continue by closing the dialog.</value>
+    <comment></comment>
+  </data>
+  <data name="conversionFail" xml:space="preserve">
+    <value>Provided document could not be processed. It might be too large or corrupted.</value>
+    <comment></comment>
+  </data>
+  <data name="conversionWarning" xml:space="preserve">
+    <value>This action will replace all current questions with the generated ones. Are you sure you want to continue?</value>
+    <comment></comment>
+  </data>
+  <data name="themeSetToDefault" xml:space="preserve">
+    <value>Default</value>
+    <comment></comment>
+  </data>
+  <data name="themeSetToStored" xml:space="preserve">
+    <value>Clear changes</value>
+    <comment></comment>
+  </data>
+    <data name="loading" xml:space="preserve">
+    <value>Loading...</value>
+    <comment></comment>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment></comment>
+  </data>
+  <data name="templateChange" xml:space="preserve">
+    <value>Change Template</value>
+    <comment></comment>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Warning</value>
+    <comment></comment>
+  </data>
+  <data name="templateWarning" xml:space="preserve">
+    <value>Change of template will discard all unsaved changes on current Survey. Do you wish to continue?</value>
+    <comment></comment>
+  </data>
+    <data name="newTemplateTitle" xml:space="preserve">
+    <value>New Template</value>
+    <comment></comment>
+  </data>
+      <data name="newSurveyTitle" xml:space="preserve">
+    <value>New Survey</value>
+    <comment></comment>
+  </data>
+    <data name="toolboxCategoryPredefined" xml:space="preserve">
+    <value>Predefined</value>
+    <comment></comment>
+  </data>
+   <data name="toolboxCategoryTextInput" xml:space="preserve">
+    <value>Text inputs</value>
+    <comment></comment>
+  </data>
+   <data name="toolboxCategoryContainer" xml:space="preserve">
+    <value>Containers</value>
+    <comment></comment>
+  </data>
+  <data name="toolboxCategoryMatrix" xml:space="preserve">
+    <value>Matrices</value>
+    <comment></comment>
+  </data>
+  <data name="toolboxCategoryChoices" xml:space="preserve">
+    <value>Choices</value>
+    <comment></comment>
+  </data>
+  <data name="toolboxCategoryMisc" xml:space="preserve">
+    <value>Misc</value>
+    <comment></comment>
+  </data>
+   <data name="creatorReadOnly" xml:space="preserve">
+    <value>The Survey is active and can no longer be changed.</value>
+    <comment></comment>
+  </data>
+  <data name="inputReadOnly" xml:space="preserve">
+    <value>This Survey cannot be further changed.</value>
+    <comment></comment>
+  </data>
+     <data name="saveFirst" xml:space="preserve">
+    <value>The Survey needs to be saved before proceeding.</value>
+    <comment></comment>
+  </data>
+  <data name="uploadPDF" xml:space="preserve">
+    <value>Upload PDF document</value>
+    <comment></comment>
+  </data>
+  <data name="boundedTo" xml:space="preserve">
+    <value>Bind to</value>
+    <comment></comment>
+  </data>
+  <data name="customFieldsEditor" xml:space="preserve">
+    <value>Custom Fields</value>
+    <comment></comment>
+  </data>
+</root>
