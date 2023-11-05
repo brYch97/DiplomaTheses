@@ -9,7 +9,7 @@ export class CustomControlService {
     public registeredControls: CustomControl[] = [];
     private _context: ComponentFramework.Context<IInputs>;
     //filtering out native PCF's
-    private _pcfPublisherWhitelist = ['brych', 'talxis'];
+    private _pcfPublisherWhitelist = ['brych'];
 
     public constructor(context: ComponentFramework.Context<IInputs>) {
         this._context = context;

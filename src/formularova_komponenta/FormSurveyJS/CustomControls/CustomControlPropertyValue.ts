@@ -1,5 +1,4 @@
 import { localization } from "survey-creator-react";
-import { ILocalizedPropertyValue } from "./components/LocalizationComponent/LocalizationComponent";
 
 
 export class CustomControlPropertyValue {
@@ -7,20 +6,12 @@ export class CustomControlPropertyValue {
     public default: boolean;
     public value: any;
     public get displayName() {
-        if (!this._translation) {
-            return this._displayNameKey;
-        }
-        return this._translation[localization.currentLocale || 'en'] || this._displayNameKey;
+        return this._displayNameKey;
     }
     private _displayNameKey: string;
-    private _translation: ILocalizedPropertyValue | undefined;
 
-    constructor(valueElement: Element, translation?: ILocalizedPropertyValue) {
-        this._translation = translation;
+    constructor(valueElement: Element) {
         this._parseValue(valueElement);
-    }
-    public updateTranslation(translation: ILocalizedPropertyValue | undefined) {
-        this._translation = translation;
     }
     private _parseValue(valueElement: Element) {
         this.name = valueElement.getAttribute('name') as string;

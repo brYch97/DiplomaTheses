@@ -15,7 +15,6 @@ import "survey-core/defaultV2.css";
 import "survey-creator-core/survey-creator-core.css";
 import { SurveyManager, SurveyType } from '../../services/SurveyManager';
 import { designerStyles } from './styles';
-import { MessageBar } from '@fluentui/react/lib/MessageBar';
 import { CustomFieldsPanel } from './CustomFieldsPanel/CustomFieldsPanel';
 
 //needed since typings for the creator are incomplete for some reason #smh
@@ -145,9 +144,6 @@ export const Designer: React.FC<IDesignerWrapper> = (props) => {
         <div ref={creatorContainerRef}
             className={`${designerStyles.root}${hasPredefinedFields && SurveyManager.SurveyType ? ' survey-predefined-fields' : ''}`}>
             <div className={designerStyles.notificationContainer} ref={notificationContainerRef} />
-            {props.readOnly &&
-                <MessageBar>{SurveyManager.LocalizationService.getString('creatorReadOnly')}</MessageBar>
-            }
             {SurveyManager.SurveyType === SurveyType.FieldDesigner &&
                 <FieldDesigner onCreatorInitialization={initializeCreator} />
             }

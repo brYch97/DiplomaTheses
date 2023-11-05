@@ -1,8 +1,6 @@
 import React = require("react");
 import { INestedPcfFactory, IVirtualComponentProps } from "../../interfaces/INestedCustomControlFactory";
-import { DataType } from "../../interfaces/Manifest";
 import * as uniqid from 'uniqid';
-import { ILocalizedProperty } from "./LocalizationComponent/LocalizationComponent";
 import { CustomControl } from "../CustomControl";
 import { CustomControlProperty } from "../CustomControlProperty";
 import { SurveyManager, SurveyType } from "../../services/SurveyManager";
@@ -13,7 +11,6 @@ interface ICustomControlRendererProps {
 }
 
 export const CustomControlRenderer: React.FC<ICustomControlRendererProps> = (props) => {
-  const bindingsRef = React.useRef<{[key: string]: any}>({});
   const containerRef = React.useRef<HTMLDivElement>(null);
   const factory = props.customControl.parentContext.factory as INestedPcfFactory;
   const customControl = props.customControl;

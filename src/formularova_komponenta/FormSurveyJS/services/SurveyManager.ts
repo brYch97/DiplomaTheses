@@ -79,7 +79,7 @@ export class SurveyManager {
         SurveyManager._instance._surveyCustomControlService =  new CustomControlService(context);
         SurveyManager._instance._surveyCustomQuestionService = new SurveyCustomQuestionService();
         SurveyManager._instance._surveyThemeService = new SurveyThemeService(surveySchema.cssVariables ?? templateSchema?.cssVariables, SurveyManager._instance._localizationService);
-        SurveyManager._instance._surveyChangesService = new SurveyChangesService(surveySchema, SurveyManager._instance._surveyThemeService, SurveyManager._instance._surveyCustomControlService,  SurveyManager._instance._localizationService, templateSchema);
+        SurveyManager._instance._surveyChangesService = new SurveyChangesService(surveySchema, SurveyManager._instance._surveyThemeService, templateSchema);
         if(SurveyManager._instance._surveyType !== SurveyType.FieldDesigner) {
             ReactElementFactory.Instance.registerElement("svc-property-grid", (props) => {
                 return React.createElement(PropertyGridComponentWrapper, props);

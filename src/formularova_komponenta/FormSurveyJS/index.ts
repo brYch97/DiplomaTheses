@@ -7,13 +7,13 @@ import { merge } from 'merge-anything'
 import { ISchema, ISchemaElement } from "./interfaces/ISchema";
 import { SurveyManager, SurveyType } from "./services/SurveyManager";
 import { ProgressIndicator } from '@fluentui/react/lib/ProgressIndicator';
-import { DEFAULT_SCHEMA_QUESTION } from "./Designers/FieldDesigner/FieldDesigner";
 import { getDefaultTemplateSchema } from "./Designers/TemplateDesigner/TemplateDesigner";
 import { getDefaultSurveySchema } from "./Designers/SurveyDesigner";
 import { filterDeep } from 'deepdash-es/standalone';
 import { IDictionary, Input } from "./Input/Input";
 import { SurveyLocalizationService } from "./services/SurveyLocalizationService";
 import { mergeStyles } from "@fluentui/react/lib/Styling";
+import { getDefaultCustomFieldSchema } from "./Designers/FieldDesigner/FieldDesigner";
 /* private _fieldEntityName: string = 'talxis_survey_attribute';
 private _templateEntityName: string = 'talxis_survey_template';
 private _surveyEntityName: string = 'talxis_survey';
@@ -205,7 +205,7 @@ export class FormSurveyJS implements ComponentFramework.StandardControl<IInputs,
     private async _getSurveySchema(bindedSchema: ISchema | null): Promise<[ISchema, ISchema?]> {
         switch (this._context.parameters.mode.raw) {
             case SurveyType.FieldDesigner: {
-                return bindedSchema ? [bindedSchema] : [DEFAULT_SCHEMA_QUESTION];
+                return bindedSchema ? [bindedSchema] : [getDefaultCustomFieldSchema()];
             }
             case SurveyType.TemplateDesigner: {
                 return bindedSchema ? [bindedSchema] : [getDefaultTemplateSchema()];

@@ -80,6 +80,14 @@
     <value>Nový formulář</value>
     <comment></comment>
   </data>
+  <data name="newCustomFieldTitle" xml:space="preserve">
+    <value>Nové předpřipravené pole</value>
+    <comment></comment>
+  </data>
+  <data name="customField" xml:space="preserve">
+    <value>Předpřipravené pole</value>
+    <comment></comment>
+  </data>
   <data name="toolboxCategoryPredefined" xml:space="preserve">
     <value>Předpřipravené</value>
     <comment></comment>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
   <control namespace="BRYCH.PCF" constructor="FormSurveyJS" version="0.0.8"
-    display-name-key="Form Component" description-key=""
+    display-name-key="Formulářová komponenta" description-key=""
     control-type="standard">
     <external-service-usage enabled="false">
     </external-service-usage>

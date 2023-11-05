@@ -28,7 +28,6 @@ export const TemplateDesigner: React.FC<IDesignerProps> = (props) => {
     const creator = React.useMemo(() => {
         return props.onCreatorInitialization({
             showSurveyTitle: true,
-            showThemeTab: true
         })
     }, [])
     return (

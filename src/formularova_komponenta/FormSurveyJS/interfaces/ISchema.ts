@@ -1,4 +1,3 @@
-import { ILocalizedProperty } from "../CustomControls/components/LocalizationComponent/LocalizationComponent";
 import { IVariable } from "../services/SurveyThemeService";
 
 export interface ILocalizedString {
@@ -44,7 +43,6 @@ export interface ISchemaElement {
         minCount?: number,
         maxCount?: number
     }[],
-    translations?: ILocalizedProperty[];
     [key: string]: any;
 }
 export enum QuestionType {

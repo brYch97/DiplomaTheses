@@ -13,7 +13,7 @@ export const ChangeNotificationComponent: React.FC<IChangeNotificationProps> = (
     const [diffComponentVisible, setDiffComponentVisible] = React.useState<boolean>(false);
     return (
         <>
-          <ActionButton 
+         {/*  <ActionButton 
                 text='See raw changes'
                 iconProps={{
                     iconName: 'FieldChanged'
@@ -24,7 +24,7 @@ export const ChangeNotificationComponent: React.FC<IChangeNotificationProps> = (
                     originalSchema={props.storedSchema}
                     currentSchema={props.currentSchema}
                     onDismiss={() => setDiffComponentVisible(false)}  />
-            }
+            } */}
         </>
     )
 };

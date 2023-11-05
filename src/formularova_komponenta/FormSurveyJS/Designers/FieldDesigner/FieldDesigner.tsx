@@ -4,22 +4,24 @@ import { SurveyCreatorComponent } from "survey-creator-react";
 import { ISchema, QuestionType } from '../../interfaces/ISchema';
 import { fieldDesignerStyles } from './styles';
 import { IDesignerProps } from '../Designer/Designer';
+import { SurveyLocalizationService } from '../../services/SurveyLocalizationService';
 
-
-export const DEFAULT_SCHEMA_QUESTION: ISchema = {
-    logoPosition: "right",
-    "pages": [
-        {
-            "name": "page1",
-            "elements": [
-                {
-                    "title": "New Custom Question",
-                    "type": QuestionType.Text,
-                    "name": "CustomQuestion"
-                }
-            ]
-        }
-    ]
+export const getDefaultCustomFieldSchema = (): ISchema => {
+    return {
+        logoPosition: "right",
+        "pages": [
+            {
+                "name": "page1",
+                "elements": [
+                    {
+                        "title": SurveyLocalizationService.get().getString("newCustomFieldTitle"),
+                        "type": QuestionType.Text,
+                        "name":  SurveyLocalizationService.get().getString("customField")
+                    }
+                ]
+            }
+        ]
+    }
 }
 
 export const FieldDesigner: React.FC<IDesignerProps> = (props) => {
@@ -32,7 +34,7 @@ export const FieldDesigner: React.FC<IDesignerProps> = (props) => {
         //@ts-ignore
         creator.onShowingProperty.add((_, options) => {
             const type = options.obj.getType();
-            if(type === 'survey' || type === 'page') {
+            if (type === 'survey' || type === 'page') {
                 options.canShow = false;
             }
         });

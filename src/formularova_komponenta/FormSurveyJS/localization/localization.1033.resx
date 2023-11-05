@@ -80,6 +80,14 @@
     <value>New Survey</value>
     <comment></comment>
   </data>
+  <data name="newCustomFieldTitle" xml:space="preserve">
+    <value>New Custom Field</value>
+    <comment></comment>
+  </data>
+  <data name="customField" xml:space="preserve">
+    <value>Custom Field</value>
+    <comment></comment>
+  </data>
     <data name="toolboxCategoryPredefined" xml:space="preserve">
     <value>Predefined</value>
     <comment></comment>

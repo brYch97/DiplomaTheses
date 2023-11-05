@@ -5,7 +5,6 @@ import * as React from 'react';
 import { CustomControlRenderer } from "./components/CustomControlRenderer";
 import { ISchema, ISchemaElement } from "../interfaces/ISchema";
 import { IInputs } from "../generated/ManifestTypes";
-import { ILocalizedProperty } from "./components/LocalizationComponent/LocalizationComponent";
 import { CustomControlProperty } from "./CustomControlProperty";
 import { localization } from "survey-creator-react";
 import { ReactQuestionFactory } from "survey-react-ui";
@@ -19,7 +18,6 @@ export class CustomControl {
     public displayName: string | undefined;
     public properties: CustomControlProperty[] = [];
     public parentContext: ComponentFramework.Context<IInputs>;
-    public translations: ILocalizedProperty[] | undefined;
     private _schemeElement: ISchemaElement | undefined;
     private _displayNameKey: string;
 
@@ -27,23 +25,9 @@ export class CustomControl {
         this.parentContext = parentContext;
         this.name = name;
         this._schemeElement = scheme?.pages![0].elements![0];
-        this.translations = this._getTranslations();
         this._parseManifest(manifestXmlString);
         this.displayName = this._getDisplayName();
         this._register();
-    }
-    public updateTranslations(value: ILocalizedProperty[] | undefined) {
-        this.translations = value;
-        for (const property of this.properties) {
-            property.updateTranslation(this.translations!);
-        }
-    }
-    private _getTranslations(): ILocalizedProperty[] | undefined {
-        const translations = this._schemeElement?.translations;
-        if (translations && translations.length > 0) {
-            return translations
-        }
-        return undefined;
     }
     private _getDisplayName(): string {
         if (SurveyManager.SurveyType === SurveyType.FieldDesigner) {
@@ -161,7 +145,7 @@ export class CustomControl {
                 isBindingProperty = true;
                 bindingPropertyFound = true;
             }
-            this.properties.push(new CustomControlProperty(propertyElement, isBindingProperty, this.translations?.find(translation => translation.propertyName === propertyElement.getAttribute('name'))))
+            this.properties.push(new CustomControlProperty(propertyElement, isBindingProperty));
             isBindingProperty = false;
         }
     }

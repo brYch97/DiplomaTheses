@@ -1,1 +1,0 @@
-{\"title\":{\"cs\":\"Nový formulář\"},\"pages\":[{\"name\":\"stránka1\",\"elements\":[{\"type\":\"field-83bbb445-f174-ee11-8179-0022489db1eb\",\"name\":\"otázka1\",\"title\":{\"cs\":\"Jméno\"},\"boundedTo\":\"CurrentFamilyName\"},{\"type\":\"text\",\"name\":\"otázka2\",\"title\":{\"cs\":\"Další pole\"}}]}]}

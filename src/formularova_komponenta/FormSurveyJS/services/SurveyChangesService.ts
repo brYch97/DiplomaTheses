@@ -1,4 +1,3 @@
-import { CustomControlService } from "./CustomControlService";
 import { ISchema } from "../interfaces/ISchema";
 import * as deepEqual from 'fast-deep-equal';
 import { SurveyThemeService } from "./SurveyThemeService";
@@ -6,7 +5,6 @@ import { SurveyManager, SurveyType } from "./SurveyManager";
 import React = require("react");
 import ReactDOM = require("react-dom");
 import { ChangeNotificationComponent } from "../Designers/components/ChangeNotification/ChangeNotification";
-import { SurveyLocalizationService } from "./SurveyLocalizationService";
 import { IExtentedSurveyCreator } from "../Designers/Designer/Designer";
 
 
@@ -14,7 +12,6 @@ export class SurveyChangesService {
     private _currentSchema: ISchema;
     private _storedSchema: ISchema;
     private _themeService: SurveyThemeService;
-    private _customControlService: CustomControlService;
     private _templateSchema: ISchema | undefined;
     private _notificationMesssageContainer: HTMLDivElement;
     private _creator: IExtentedSurveyCreator;
@@ -22,11 +19,10 @@ export class SurveyChangesService {
         throw new Error('No change handler has been specified');
     }
 
-    public constructor(surveySchema: ISchema, themeService: SurveyThemeService, customControlService: CustomControlService, localizationService: SurveyLocalizationService, templateSchema?: ISchema) {
+    public constructor(surveySchema: ISchema, themeService: SurveyThemeService, templateSchema?: ISchema) {
         this._templateSchema = templateSchema;
         this.setStoredSchema(surveySchema);
         this._themeService = themeService;
-        this._customControlService = customControlService;
         this._currentSchema = structuredClone(surveySchema);
     }
     public get creator() {
@@ -47,14 +43,6 @@ export class SurveyChangesService {
         }
         switch (SurveyManager.SurveyType) {
             case SurveyType.FieldDesigner: {
-                //inject translations for PCF properties
-                if (this._currentSchema.pages && this._currentSchema.pages[0].elements) {
-                    const controlType = this._currentSchema.pages[0]?.elements[0]?.type;
-                    const translations = this._customControlService.registeredControls.find(control => control.surveyjsName === controlType)?.translations;
-                    if (translations) {
-                       this._currentSchema.pages[0].elements[0].translations = translations;
-                    }
-                }
                 break;
             }
             case SurveyType.FormDesigner: {

@@ -2,8 +2,6 @@ import { ComponentCollection, Question, ExpressionValidator, NumericValidator, T
 import { ISchema, ISchemaElement } from "../interfaces/ISchema";
 import { localization } from "survey-creator-react";
 import { SurveyManager, SurveyType } from "./SurveyManager";
-import { FlatRepository } from "survey-pdf";
-import { ElementFactory, QuestionTextModel } from 'survey-core';
 import { ComponentCollection as ComponentCollectionPDF } from 'survey-pdf/node_modules/survey-core';
 
 type IValidators = ISchemaElement['validators'];
@@ -58,7 +56,6 @@ export class SurveyCustomQuestionService {
       if (SurveyManager.SurveyType === SurveyType.ClientInput) {
         //@ts-ignore
         ComponentCollectionPDF.Instance.add(component);
-        this._registerRendererPDF(question);
       }
     }
   }
@@ -137,10 +134,5 @@ export class SurveyCustomQuestionService {
     if(!type.startsWith('pcf_')) {
       return;
     }
-    //if(!type.startsWith('pcf_')) {
-      //ElementFactory.Instance.registerElement(question.guid, (name) => {
-        //return new QuestionTextModel(name);
-    //});
-      //we have a PCF
   }
 }
