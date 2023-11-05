@@ -3,7 +3,7 @@
     namespace="Sample"
     constructor="Slider"
     version="0.0.1"
-    display-name-key="Posuvník"
+    display-name-key="Slider"
     description-key="Ukázková field komponenta"
     control-type="standard">
     <property name="step"
