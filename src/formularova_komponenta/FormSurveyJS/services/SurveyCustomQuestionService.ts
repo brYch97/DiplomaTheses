@@ -129,10 +129,4 @@ export class SurveyCustomQuestionService {
     }
 
   }
-  private _registerRendererPDF(question: { guid: string, schema: ISchema }) {
-    const type = question.schema.pages![0].elements![0].type;
-    if(!type.startsWith('pcf_')) {
-      return;
-    }
-  }
 }

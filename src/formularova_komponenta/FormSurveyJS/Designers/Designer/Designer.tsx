@@ -62,7 +62,7 @@ export interface IDesignerProps {
 
 const DEFAULT_CREATOR_OPTIONS: ICreatorOptions = {
     isAutoSave: true,
-    haveCommercialLicense: true,
+    haveCommercialLicense: false,
     showJSONEditorTab: false,
     showTranslationTab: true,
 }

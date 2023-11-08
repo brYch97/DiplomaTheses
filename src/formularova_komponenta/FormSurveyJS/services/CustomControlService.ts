@@ -91,22 +91,4 @@ export class CustomControlService {
         //@ts-ignore - replaceAll not part of types
         return name.replaceAll('.', '_').toLowerCase();
     }
-
-/*     private _normalizeCustomControlName(name: string, normalizeFor: "Xrm" | "SurveyJS") {
-        //TODO: this should get handled better
-        //ugly hack to remove talxis_ prefix
-        //consider using wildcard characters - https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/query-data-web-api
-        if (name.startsWith('talxis_talxis_')) {
-            name = name.substring(7)
-        }
-        else if(name.startsWith('talxis_')) {
-            name = name.split('talxis_')[1];
-        }
-        if(normalizeFor === 'Xrm') {
-            //@ts-ignore - replaceAll not part of types
-            return name.replaceAll('_', '.').toLowerCase();
-        }
-        //@ts-ignore - replaceAll not part of types
-        return name.replaceAll('.', '_').toLowerCase();
-    } */
 }
