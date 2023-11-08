@@ -5,11 +5,19 @@ import { SurveyManager, SurveyType } from "./SurveyManager";
 import { ComponentCollection as ComponentCollectionPDF } from 'survey-pdf/node_modules/survey-core';
 
 type IValidators = ISchemaElement['validators'];
+
+/**
+ * Service for handling custom survey questions.
+ */
 export class SurveyCustomQuestionService {
+  /**
+   * Constructs a new instance of the SurveyCustomQuestionService.
+   */
   public constructor() {
     if (SurveyManager.SurveyType !== SurveyType.TemplateDesigner && SurveyManager.SurveyType !== SurveyType.FormDesigner) {
       return;
     }
+    //dummy needs to be here in order for the custom field option to show up in the designer
     ComponentCollection.Instance.add({
       name: "dummy",
       questionJSON: {
@@ -20,7 +28,10 @@ export class SurveyCustomQuestionService {
       category: 'Custom',
     });
   }
-
+ /**
+   * Registers the provided questions.
+   * @param {Array<{ guid: string, schema: ISchema }>} questions - The questions to register.
+   */
   public registerQuestions(questions: { guid: string, schema: ISchema }[]) {
     for (const question of questions) {
       const element = question.schema!.pages![0].elements![0];
@@ -59,16 +70,26 @@ export class SurveyCustomQuestionService {
       }
     }
   }
-
+  /**
+   * Gets the custom questions.
+   * @returns {Array<{ guid: string, schema: ISchema }>} The custom questions.
+   */
   public getCustomQuestions() {
     return ComponentCollection.Instance.items;
   }
-
+  /**
+   * Clears the component collections.
+   */
   public clear() {
     ComponentCollection.Instance.clear();
     ComponentCollectionPDF.Instance.clear();
   }
-
+    /**
+   * Gets the title of the custom question.
+   * @private
+   * @param {ISchema} schema - The schema of the custom question.
+   * @returns {string} The title of the custom question.
+   */
   private _getCustomQuestionTitle(schema: ISchema): string {
     const title = schema.pages![0].elements![0].title;
     if (!title) {
@@ -79,6 +100,13 @@ export class SurveyCustomQuestionService {
     }
     return title[localization.currentLocale] ?? title.default ?? "";
   }
+  /**
+   * Sets the validators for the question instance.
+   * @private
+   * @param {Question} questionInstance - The question instance.
+   * @param {IValidators} validators - The validators.
+   * @param {string} [newQuestionName] - The new name for the question.
+   */
   private _setQuestionInstanceValidators(questionInstance: Question, validators: IValidators, newQuestionName?: string) {
     if (!validators) {
       return;

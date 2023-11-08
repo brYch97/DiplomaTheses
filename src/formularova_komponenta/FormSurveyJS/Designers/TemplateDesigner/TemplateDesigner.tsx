@@ -23,7 +23,12 @@ export const getDefaultTemplateSchema = (): ISchema => {
     }
     return schema;
 }
-
+/**
+ * @function TemplateDesigner
+ * @description Functional component that creates a survey designer for template.
+ * @param {IDesignerProps} props - The properties for the TemplateDesigner component.
+ * @returns {React.FC} The TemplateDesigner component.
+ */
 export const TemplateDesigner: React.FC<IDesignerProps> = (props) => {
     const creator = React.useMemo(() => {
         return props.onCreatorInitialization({

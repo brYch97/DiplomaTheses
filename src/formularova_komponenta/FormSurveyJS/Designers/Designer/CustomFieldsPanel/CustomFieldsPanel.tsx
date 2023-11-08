@@ -16,6 +16,13 @@ interface ICustomFieldsPanelProps extends IPanelProps {
     onReinitializeSurvey: () => void;
 }
 
+/**
+ * @function CustomFieldsPanel
+ * @description Functional component that creates a panel for managing custom fields.
+ * @param {ICustomFieldsPanelProps} props - The properties for the CustomFieldsPanel component.
+ * @returns {React.FC} The CustomFieldsPanel component.
+ */
+
 export const CustomFieldsPanel: React.FC<ICustomFieldsPanelProps> = (props) => {
     const [
         customFields,

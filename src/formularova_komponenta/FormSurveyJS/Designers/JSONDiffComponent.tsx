@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Differ } from 'json-diff-kit';
 import { Viewer } from 'json-diff-kit';
 import Dialog, { DialogType } from '@fluentui/react/lib/Dialog';
-//TODO: import how it should be
 import 'json-diff-kit/dist/viewer.css';
 import { ISchema } from '../interfaces/ISchema';
 
@@ -21,6 +20,12 @@ const viewerProps = {
         wordSeparator: ' '
     },
 };
+/**
+ * @function JSONDiffComponent
+ * @description Functional component that creates a viewer for JSON differences in schema.
+ * @param {IJSONDiffComponent} props - The properties for the JSONDiffComponent.
+ * @returns {React.FC} The JSONDiffComponent.
+ */
 export const JSONDiffComponent: React.FC<IJSONDiffComponent> = (props) => {
     const diffRef = React.useRef(new Differ({
         detectCircular: true,

@@ -4,11 +4,15 @@ import { CustomControl } from "../CustomControls/CustomControl";
 import { ElementFactory } from "survey-core";
 import { SurveyManager, SurveyType } from "./SurveyManager";
 
+/**
+ * Service that registers custom controls and makes them available as question types in SurveyJS.
+ */
+
 export class CustomControlService {
     public DomParser: DOMParser = new DOMParser();
     public registeredControls: CustomControl[] = [];
     private _context: ComponentFramework.Context<IInputs>;
-    //filtering out native PCF's
+    // List of publishers whose controls can be registered in the survey, mainly to filter out native Microsoft controls
     private _pcfPublisherWhitelist = ['brych'];
 
     public constructor(context: ComponentFramework.Context<IInputs>) {
@@ -69,13 +73,19 @@ export class CustomControlService {
             this.registeredControls.push(new CustomControl(entity.name, entity.manifest, this._context, scheme))
         }
     }
-
+    /**
+     * Unregisters all custom controls that were registered by this service.
+     */
     public clear() {
         for(const registeredControl of this.registeredControls) {
             ElementFactory.Instance.unregisterElement(registeredControl.surveyjsName, true)
         }
     }
-
+    /**
+     * Returns a custom control by its name.
+     * @param {string} name - The name of the control to be returned.
+     * @returns {CustomControl} - The custom control with the specified name.
+     */
     private _normalizeCustomControlName(name: string, normalizeFor: "Xrm" | "SurveyJS") {
         for (const publisher of this._pcfPublisherWhitelist) {
             if (name.startsWith(publisher + '_')) {

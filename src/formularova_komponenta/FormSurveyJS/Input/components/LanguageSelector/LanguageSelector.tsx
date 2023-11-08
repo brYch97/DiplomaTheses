@@ -9,6 +9,12 @@ interface ILanguageSelector {
     onChange: (option: IContextualMenuItem) => void;
 }
 
+/**
+ * @function LanguageSelector
+ * @description Functional component that creates a dropdown menu for language selection.
+ * @param {ILanguageSelector} props - The properties for the LanguageSelector component.
+ * @returns {React.FC} The LanguageSelector component.
+ */
 export const LanguageSelector: React.FC<ILanguageSelector> = (props) => {
     return (
         <CommandBarButton

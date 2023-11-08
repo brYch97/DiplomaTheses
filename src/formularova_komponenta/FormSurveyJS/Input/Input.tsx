@@ -24,6 +24,13 @@ interface ISurveyInputProps {
     onSurveyCompleted: (data: IDictionary) => void;
 }
 
+/**
+ * @function Input
+ * @description Functional component that creates a survey in which the user can fill the form.
+ * It also handles the form value changes and completion of the survey.
+ * @param {ISurveyInputProps} props - The properties for the Input component.
+ * @returns {React.FC} The Input component.
+ */
 export const Input: React.FC<ISurveyInputProps> = (props) => {
     const survey = React.useMemo(() => {
         const survey = new Model(JSON.stringify(props.schema));
@@ -70,7 +77,7 @@ export const Input: React.FC<ISurveyInputProps> = (props) => {
         const surveyPDF = new SurveyPDF(JSON.stringify(props.schema), options);
         surveyPDF.data = survey.data;
         surveyPDF.onRenderQuestion.add((_, options: any) => {
-            //TODO: ugly hack for RUIAN control
+            //TODO: remove ugly hack for RUIAN control
             try {
                 const value = options.bricks[0].bricks[2].value;
                     const address = JSON.parse(decode(value));

@@ -5,6 +5,13 @@ import { SurveyManager } from "../../../services/SurveyManager";
 import { FormLayoutConvertor } from "./utils/FormLayoutConvertor";
 import { SurveyLocalizationService } from "../../../services/SurveyLocalizationService";
 
+/**
+ * @function useFormUploadDialog
+ * @description Custom hook that manages the state and behavior of the form upload dialog.
+ * @param {function} onDismiss - The function to be called when the dialog is dismissed.
+ * @returns {Array} An array containing the state and behavior of the form upload dialog.
+ */
+
 export const useFormUploadDialog = (onDismiss: () => void): [
     File | null,
     string | null,

@@ -13,7 +13,16 @@ export interface IExtendedSchemaElement extends ISchemaElement {
     pageNumber: number
 }
 
+/**
+ * @class FormLayoutConvertor
+ * @description Provides static methods for converting form layout structures to schemas.
+ */
 export class FormLayoutConvertor {
+    /**
+     * Converts a form layout structure to a schema.
+     * @param {FormRecognizer.ILayoutStructure} formLayoutStructure - The form layout structure to convert.
+     * @returns {ISchema} - The converted schema.
+     */
     public static toSchema(formLayoutStructure: FormRecognizer.ILayoutStructure) {
         const schema: ISchema = {
             pages: [] as any
@@ -23,6 +32,11 @@ export class FormLayoutConvertor {
         FormLayoutConvertor._injectTableSchemaElements(schema, tables);
         return schema;
     }
+        /**
+     * Injects table schema elements into a schema.
+     * @param {ISchema} schema - The schema to inject into.
+     * @param {ITable[]} tables - The tables to inject.
+     */
     private static _injectTableSchemaElements = (schema: ISchema, tables: ITable[]) => {
         for (const table of tables) {
             const elements = schema.pages?.flatMap(page => page.elements);
@@ -40,6 +54,12 @@ export class FormLayoutConvertor {
             }
         }
     }
+        /**
+     * Injects field schema elements into a schema.
+     * @param {ISchema} schema - The schema to inject into.
+     * @param {FormRecognizer.IParagraph[]} paragraphs - The paragraphs to inject.
+     * @param {FormRecognizer.IBoundingRegion[]} tableCellBoundingRegions - The bounding regions of the table cells to inject.
+     */
     private static _injectFieldSchemaElements = (schema: ISchema, paragraphs: FormRecognizer.IParagraph[], tableCellBoundingRegions: FormRecognizer.IBoundingRegion[]) => {
         let index = 1;
         for (const paragraph of paragraphs) {
@@ -70,6 +90,9 @@ export class FormLayoutConvertor {
             FormLayoutConvertor._pushSchemaElementToPage(schema, schemaElement, paragraph);
         }
     }
+    /** 
+     * Pushes a schema element to a page.
+    */
     private static _pushSchemaElementToPage(schema: ISchema, schemaElement: ISchemaElement, paragraph: FormRecognizer.IParagraph) {
         const pageNumber = paragraph.boundingRegions[0].pageNumber;
         let page = schema.pages?.find(page => page.name === `Page ${pageNumber}`);
@@ -83,6 +106,9 @@ export class FormLayoutConvertor {
         }
         page.elements?.push(schemaElement);
     }
+    /** 
+     * Gets the tables from a form layout structure.
+    */
     private static _getTables(formLayoutStructure: FormRecognizer.ILayoutStructure): ITable[] {
         const tables: ITable[] = [];
         let index = 1;
@@ -116,6 +142,9 @@ export class FormLayoutConvertor {
         }
         return tables;
     }
+    /** 
+     * Gets the question type from a question title.
+    */
     private static _getQuestionType = (title: string): QuestionType => {
         title = title.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
         if (title.includes('podpis')) {
@@ -123,6 +152,9 @@ export class FormLayoutConvertor {
         }
         return QuestionType.Text;
     }
+    /** 
+     * Gets the question input type from a question title.
+    */
     private static _getQuestionInputType = (title: string): InputType | undefined => {
         title = title.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
         if (title.includes('datum') || title.includes('platnost')) {

@@ -67,6 +67,13 @@ const DEFAULT_CREATOR_OPTIONS: ICreatorOptions = {
     showTranslationTab: true,
 }
 
+/**
+ * @function Designer
+ * @description Functional component that is used by all creators.
+ * @param {IDesignerProps} props - The properties for the Designer component.
+ * @returns {React.FC} The Designer component.
+ */
+
 export const Designer: React.FC<IDesignerWrapper> = (props) => {
     const creatorRef = React.useRef<IExtentedSurveyCreator>();
     const creatorContainerRef = React.useRef<HTMLDivElement>(null);

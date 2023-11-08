@@ -12,6 +12,13 @@ import { MessageBar, MessageBarType } from '@fluentui/react/lib/MessageBar';
 import { SurveyLocalizationService } from '../../../services/SurveyLocalizationService';
 
 
+/**
+ * @function FormUploadDialog
+ * @description Functional component that handles machine conversion of PDF documents.
+ * @param {ICustomPropertyGridComponentChild} props - The properties for the FormUploadDialog component.
+ * @returns {React.FC} The FormUploadDialog component.
+ */
+
 export const FormUploadDialog: React.FC<ICustomPropertyGridComponentChild> = (props, ref) => {
     const fileUploadId = useId();
     const [
