@@ -43,23 +43,31 @@
     <img class="border" alt="big" src="image-3.png"
 </p>
 
-7. Je možné, že po rozkliknutí formuláře se Vám nad formulářem zobrazí hláška *Tento formulář již byl odeslán a nelze dále upravovat.* Formulář již tím pádem před Vámi vyplnil jiný tester. V tomto případě prosím zkuste zvolit jiný formulář anebo se odhlaště z portálu (viz bod 9) a přihlašte se pomocí jiného testovacího profilu.
+
+<!-- 7. Je možné, že po rozkliknutí formuláře se Vám nad formulářem zobrazí hláška *Tento formulář již byl odeslán a nelze dále upravovat.* Formulář již tím pádem před Vámi vyplnil jiný tester. V tomto případě prosím zkuste zvolit jiný formulář anebo se odhlaště z portálu (viz bod 9) a přihlašte se pomocí jiného testovacího profilu.
 
 <p align="center">
     <img alt="big" src="image-4.png"
-</p>
+</p> -->
 
-8. Všechny Vaše odeslané a rozpracované formuláře si můžete zobrazit pomocí nabídky *Moje formuláře*.
+7. Všechny Vaše odeslané a rozpracované formuláře si můžete zobrazit pomocí nabídky *Moje formuláře*.
 
 <p align="center">
-    <img class="border" alt="big" src="image-5.png"
+    <img class="border" alt="big" src="image-8.png"
 </p>
 
-9. Pro odhlášení z portálu je nutné kliknout na jméno testovacího profilu v pravém horním rohu portálu a kliknout na možnost *Odhlásit se*.
+
+8. Každé rozkliknutí formuláře v záložce *Formuláře* vytvoří novou instanci formuláře. Může se tedy stát, že v nabídce
+*Moje formuláře* uvidíte jeden formulář vícekrát. Nejedná se o chybu, ale o účelové chování, aby každý, kdo se na testovací profil přihlásí mohl formulář vyplnit. Finální verze Vám na jeden formulář vícekrát odpovědět neumožní.
+
+
+9. Portál zatím nemá vyřešené odhlášení, pokud si tedy přejete změnit testovací profil, je nutné otevřít [anonymní okno prohlížeče](https://support.google.com/chrome/answer/95464?hl=cs&co=GENIE.Platform%3DDesktop) a přihlásit do portálu skrze něj.
+
+<!-- 9. Pro odhlášení z portálu je nutné kliknout na jméno testovacího profilu v pravém horním rohu portálu a kliknout na možnost *Odhlásit se*.
 
 <p align="center">
     <img class="border" alt="small" src="image-6.png"
 </p>
-
+ -->
 
    

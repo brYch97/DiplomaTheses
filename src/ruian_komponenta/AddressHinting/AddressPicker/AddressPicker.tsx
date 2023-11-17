@@ -109,6 +109,7 @@ export const AddressPicker: React.FC<IAddressPicker> = (props) => {
                 autoComplete='on'
                 placeholder='---'
                 label='Číslo popisné'
+                dropdownWidth={150}
                 selectedKey={address.region?.municipality?.street?.place?.placeId ?? '__'}
                 onChange={(e, option: any) => {
                     setPlace({

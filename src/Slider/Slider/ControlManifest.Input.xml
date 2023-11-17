@@ -8,7 +8,7 @@
     control-type="standard">
     <property name="step"
       display-name-key="Krok"
-      description-key="Určuje, o kolik se hodnota změní, když uživatel posune posuvník."
+      description-key="..."
       of-type-group="numbers"
       usage="input"
       default-value="1"
@@ -19,21 +19,21 @@
     </type-group>
     <property name="min"
       display-name-key="Minimální hodnota"
-      description-key="Minimální číslo, které posuvník může nastavit jako hodnotu. Pokud není nastaveno, bude použita minimální hodnota nastavená ve vázaném sloupci."
+      description-key="..."
       of-type-group="numbers"
       usage="input"
       default-value="0"
       required="false" />
     <property name="max"
       display-name-key="Maximální hodnota"
-      description-key="Maximální číslo, které posuvník může nastavit jako hodnotu. Pokud není nastaveno, bude použita maximální hodnota nastavená ve vázaném sloupci."
+      description-key="..."
       of-type-group="numbers"
       usage="input"
       default-value="100"
       required="false" />
     <property name="value"
       display-name-key="Hodnota posuvníku"
-      description-key="Hodnota sloupce, která bude vázána na posuvník."
+      description-key="..."
       of-type-group="numbers"
       usage="bound"
       required="true" />

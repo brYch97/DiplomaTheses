@@ -17,9 +17,11 @@ async function CreateRevision(formContext) {
         "br_name": name,
         "br_schema": schema,
     }
-    if(template) {
-        createRecordBody = {...createRecordBody, 
-            "br_Template@odata.bind": "/br_templates(" + template[0].id.replace(/[{}]/g, '').toLowerCase() + ")"
+    if (template) {
+        createRecordBody = {
+            ...createRecordBody,
+            "br_Template@odata.bind": "/br_templates(" +
+                template[0].id.replace(/[{}]/g, '').toLowerCase() + ")"
         }
     }
     const result = await Xrm.WebApi.online.createRecord("br_form", createRecordBody);
@@ -28,4 +30,7 @@ async function CreateRevision(formContext) {
         entityName: 'br_form',
         entityId: result.id
     });
+}
+function OpenForm() {
+    alert('hello');
 }

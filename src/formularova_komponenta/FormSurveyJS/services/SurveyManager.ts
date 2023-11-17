@@ -137,7 +137,6 @@ export class SurveyManager {
             displayName: SurveyManager.LocalizationService.getString('boundedTo'),
             category: "general",
             visibleIndex: 0,
-            readOnly: SurveyManager._instance._surveyType !== SurveyType.FieldDesigner
         });
 
     }

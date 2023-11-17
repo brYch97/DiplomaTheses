@@ -71,6 +71,7 @@ export const Input: React.FC<ISurveyInputProps> = (props) => {
             },
             fontName: 'Roboto',
             useCustomFontInHtml: true,
+            haveCommercialLicense: true,
             textFieldRenderAs: 'multiLine',
             format: [pdfWidth, pdfHeight]
         };
@@ -81,7 +82,7 @@ export const Input: React.FC<ISurveyInputProps> = (props) => {
             try {
                 const value = options.bricks[0].bricks[2].value;
                     const address = JSON.parse(decode(value));
-                    const streetName = address?.region?.municipality?.street?.streetName ?? address?.region?.municipality?.street?.streetName;
+                    const streetName = address?.region?.municipality?.street?.streetName ?? address?.region?.municipality?.street?.streetLessPartName;
                     const cp = address?.region?.municipality?.street?.place?.placeCp;
                     const municipality = address?.region?.municipality?.municipalityName;
                     if(streetName && cp && municipality) {
@@ -105,15 +106,15 @@ export const Input: React.FC<ISurveyInputProps> = (props) => {
         DocController.addFont("Roboto", roboto.bolditalic, "bolditalic");
         survey.addNavigationItem({
             id: "pdf-export",
-            title: "Save as PDF",
+            title: "Stáhnout jako PDF",
             action: () => saveSurveyToPdf('test')
         })
     }, []);
-
+    //language selector currently not used
     const [selectedLanguage, setSelectedLanguage] = React.useState<string>(SurveyManager.LocalizationService.currentLocale);
     return (
         <div className={inputStyles.root}>
-            {availableLanguages.length > 1 &&
+{/*             {availableLanguages.length > 1 &&
                 <LanguageSelector
                     selectedLanguage={selectedLanguage}
                     languages={availableLanguages}
@@ -121,7 +122,7 @@ export const Input: React.FC<ISurveyInputProps> = (props) => {
                         survey.locale = option.key as string;
                         setSelectedLanguage(option.key as string);
                     }} />
-            }
+            } */}
             {props.readOnly && SurveyManager.IsFullPage &&
                 <MessageBar>{SurveyManager.LocalizationService.getString('inputReadOnly')}</MessageBar>
             }
