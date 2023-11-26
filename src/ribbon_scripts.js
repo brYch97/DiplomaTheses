@@ -31,6 +31,22 @@ async function CreateRevision(formContext) {
         entityId: result.id
     });
 }
-function OpenForm() {
-    alert('hello');
+function OpenForm(selectedIds, selectedControl) {
+    const gridId = selectedControl.getViewSelector().getCurrentView().id;
+    const recordId = selectedIds[0].Id;
+    if (gridId === '{A0C1ABA8-8C71-EE11-8179-0022489BA2A7}') {
+        Xrm.Navigation.openForm({
+            entityName: 'br_response'
+        },
+            {
+                'br_form': recordId
+            }
+        );
+        return;
+    }
+    Xrm.Navigation.navigateTo({
+        pageType: 'entityrecord',
+        entityName: 'br_form',
+        entityId: recordId
+    })
 }

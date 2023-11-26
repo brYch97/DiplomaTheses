@@ -9,7 +9,8 @@
     min-height: 0;
     min-width: 0;
 }
-.sv-list__item .sv-list__item-body:has([xlink|href="#icon-dummy"]) {
+.sv-list__item .sv-list__item-body:has([xlink|href="#icon-dummy"]),
+.sd-file__drag-area-placeholder {
     display: none;
 }
 

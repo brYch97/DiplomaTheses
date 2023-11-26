@@ -791,6 +791,8 @@ const CZ_TRANSLATIONS = {
     "maxErrorText": "Zpráva pro chybu \"Hodnota překračuje maximum\"",
     "otherErrorText": "Zpráva pro chybu \"Prázdný komentář\"",
     "keyDuplicationError": "Zpráva pro chybu \"Klíč není unikátní\"",
+    "signaturePlaceHolder": "Podpis",
+    "fileDragAreaPlaceholder": "Soubor můžete nahrát jeho přetažením na tuto plochu nebo klinutím na tlačítko níže",
     "maxSelectedChoices": "Maximální počet vybraných možností",
     "showClearButton": "Zobrazit tlačítko \"Vymazat\"",
     "showNumber": "Zobrazit číslo panelu",

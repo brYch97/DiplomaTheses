@@ -31,13 +31,15 @@
     <img alt="small" src="image-1.png"
 </p>
 
+> **_POZNÁMKA:_**  Jelikož přihlášení probíhá skrze testovací rozhraní NIA, je možné, že na Vás během přihlášení vyskočí chybová hláška o nemožnosti zpracování požadavku. Jedná se o chybu způsobenou změnami na straně NIA, kterou většinou do pár hodin opraví. Pokud na Vás tedy tato chybová hláška vyskočí, zkuste se prosím přihlásit znovu o něco později.
+
 5. Pokud dojde k zobrazení následujícího dialogu, pokračujte prosím kliknutím na tlačítko *Create*.
 
 <p align="center">
     <img alt="small" src="image-2.png"
 </p>
 
-6. Následně budete přesměrováni do občanského portálu pro vyplnění formulářů. Formulář můžete začít vyplňovat rozkliknutím odkazu konkrétního formuláře.
+6. Následně budete přesměrováni do občanského portálu pro vyplnění formulářů. Formulář můžete začít vyplňovat rozkliknutím odkazu konkrétního formuláře. Do formuláře samozřejmě nemusíte vyplňovat reálné údaje.
 
 <p align="center">
     <img class="border" alt="big" src="image-3.png"
