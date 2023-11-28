@@ -102,7 +102,7 @@ export const AddressPicker: React.FC<IAddressPicker> = (props) => {
                 disabled={!address.region?.municipality?.street || props.disabled}
                 styles={{
                     root: {
-                        maxWidth: 70
+                        maxWidth: 100
                     }
                 }}
                 allowFreeInput
