@@ -17,10 +17,7 @@ interface ICustomFieldsPanelProps extends IPanelProps {
 }
 
 /**
- * @function CustomFieldsPanel
- * @description Functional component that creates a panel for managing custom fields.
- * @param {ICustomFieldsPanelProps} props - The properties for the CustomFieldsPanel component.
- * @returns {React.FC} The CustomFieldsPanel component.
+ *  Functional component that creates a panel for managing custom fields.
  */
 
 export const CustomFieldsPanel: React.FC<ICustomFieldsPanelProps> = (props) => {

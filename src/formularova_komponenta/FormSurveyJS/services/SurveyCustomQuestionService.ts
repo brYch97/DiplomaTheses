@@ -70,10 +70,6 @@ export class SurveyCustomQuestionService {
       }
     }
   }
-  /**
-   * Gets the custom questions.
-   * @returns {Array<{ guid: string, schema: ISchema }>} The custom questions.
-   */
   public getCustomQuestions() {
     return ComponentCollection.Instance.items;
   }

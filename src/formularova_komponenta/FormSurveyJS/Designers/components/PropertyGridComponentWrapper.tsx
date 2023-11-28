@@ -6,10 +6,7 @@ import { SurveyManager, SurveyType } from '../../services/SurveyManager';
 import { FormUploadDialog } from './FormUploadDialog/FormUploadDialog';
 
 /**
- * @function PropertyGridComponentWrapper
- * @description Functional component that wraps the PropertyGridComponent and conditionally renders the options to show ThemeDesigner and FormUploadDialog components.
- * @param {PropertyGridComponentWrapperProps} props - The properties for the PropertyGridComponentWrapper component.
- * @returns {React.FC} The PropertyGridComponentWrapper component.
+ * Functional component that wraps the PropertyGridComponent and conditionally renders the options to show ThemeDesigner and FormUploadDialog components.
  */
 export const PropertyGridComponentWrapper: React.FC<{ model: any }> = (props) => {
     return (

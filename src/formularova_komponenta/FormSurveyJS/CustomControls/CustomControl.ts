@@ -11,7 +11,9 @@ import { ReactQuestionFactory } from "survey-react-ui";
 import { SurveyManager, SurveyType } from "../services/SurveyManager";
 import { FlatRepository } from "survey-pdf";
 
-
+/**
+ * Represents a custom control used in a survey. Creates a translation layer between PCF and SurveyJS.
+ */
 export class CustomControl {
     public name: string;
     public surveyjsName: string;
@@ -44,6 +46,9 @@ export class CustomControl {
         }
         return this._schemeElement.title.default ?? "";
     }
+    /**
+     * Registers the custom control in the survey library.
+     */
     private _register() {
         //@ts-ignore - replaceAll not part of typings
         const CustomControlModel = this._createModelClass(this.surveyjsName);
@@ -89,6 +94,10 @@ export class CustomControl {
         const locale = localization.getLocale("");
         locale.qt[this.surveyjsName] = this.displayName;
     }
+    /**
+     * Creates an array of properties for the custom control.
+     * @returns {any[]} The array of properties.
+     */
     private _createProperties(): any[] {
         const properties = this.properties.filter(property => property.usage === "input").map(property => {
             const result: any = {
@@ -110,6 +119,11 @@ export class CustomControl {
         return properties;
     }
 
+    /**
+     * Creates a model class for a custom control.
+     * @param surveyjsName - The name of the custom control in SurveyJS.
+     * @returns The created CustomControlModel class.
+     */
     private _createModelClass = (surveyjsName: string) => {
         class CustomControlModel extends Question {
             getType(): string {
@@ -131,6 +145,11 @@ export class CustomControl {
         }
         return CustomControlModel;
     }
+    /**
+     * Parses the manifest XML string and extracts control properties.
+     * 
+     * @param manifestXmlString - The XML string representing the manifest.
+     */
     private _parseManifest(manifestXmlString: string) {
         const xmlDoc = new DOMParser().parseFromString(manifestXmlString, "text/xml");
         const controlElement = xmlDoc.querySelector("control");

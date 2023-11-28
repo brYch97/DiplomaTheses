@@ -19,11 +19,6 @@ export class SurveyLocalizationService {
   private _userSettings: ComponentFramework.UserSettings | undefined;
   private _resources: ComponentFramework.Resources;
   
-  /**
-   * Constructs a new instance of the SurveyLocalizationService.
-   * @param {ComponentFramework.UserSettings} userSettings - The user settings.
-   * @param {ComponentFramework.Resources} resources - The resources.
-   */
   constructor(userSettings: ComponentFramework.UserSettings, resources: ComponentFramework.Resources) {
     this._userSettings = userSettings;
     this._resources = resources;
@@ -36,53 +31,24 @@ export class SurveyLocalizationService {
     }
 
   }
-    /**
-   * Gets the instance of the SurveyLocalizationService.
-   * @returns {SurveyLocalizationService} The instance of the SurveyLocalizationService.
-   */
   public static get() {
     return this._instance;
   }
-    /**
-   * Initializes the SurveyLocalizationService.
-   * @param {ComponentFramework.UserSettings} userSettings - The user settings.
-   * @param {ComponentFramework.Resources} resources - The resources.
-   */
   public static init(userSettings: ComponentFramework.UserSettings, resources: ComponentFramework.Resources) {
     SurveyLocalizationService._instance = new SurveyLocalizationService(userSettings, resources);
   }
-    /**
-   * Gets the localized label for the CSS variable.
-   * @param {string} name - The name of the CSS variable.
-   * @returns {string} The localized label for the CSS variable.
-   */
   public getLocalizedLabelForCSSVariable(name: string) {
     return CSS_VARIABLES_LABELS[name][this.currentLocale] ?? CSS_VARIABLES_LABELS[name]['en']
   }
-    /**
-   * Gets the string from the resources.
-   * @param {string} name - The name of the string.
-   * @returns {string} The string from the resources.
-   */
   public getString(name: string) {
     return this._resources.getString(name);
   }
-    /**
-   * Gets the localized label for the toolbox category.
-   * @param {string} name - The name of the toolbox category.
-   * @returns {string} The localized label for the toolbox category.
-   */
   public getLocalizedLableForToolboxCategory(name: string) {
     if (name === 'Custom') {
       return this.getString('toolboxCategoryPredefined');
     }
     return name;
   }
-    /**
-   * Maps locales to languages.
-   * @param {string[]} locales - The locales.
-   * @returns {ILanguage[]} The languages.
-   */
   public mapLocalesToLanguage(locales: string[]): ILanguage[] {
     const localeLanguageInEnglish = new Intl.DisplayNames([this.currentLocale], { type: 'language' });
     const results: ILanguage[] = [];
@@ -100,12 +66,6 @@ export class SurveyLocalizationService {
     return results;
   }
 
-  /**
-   * Gets the localized survey property title.
-   * @param {ISchema} schema - The schema.
-   * @param {"title" | "description"} propertyName - The property name.
-   * @returns {string} The localized survey property title.
-   */
   public getLocalizedSurveyPropertyTitle(schema: ISchema, propertyName: "title" | "description"): string {
     let property;
     if (SurveyManager.SurveyType === SurveyType.FieldDesigner) {
@@ -122,11 +82,6 @@ export class SurveyLocalizationService {
     }
     return property[this.currentLocale] ?? property['default'] ?? ""
   }
-    /**
-   * Gets the user locale.
-   * @private
-   * @returns {string} The user locale.
-   */
   private _getUserLocale = (): string => {
     let locale;
     if (this._userSettings) {
@@ -141,22 +96,12 @@ export class SurveyLocalizationService {
     }
     return 'en';
   }
-    /**
-   * Checks if the locale is supported.
-   * @private
-   * @param {string} locale - The locale.
-   * @returns {boolean} True if the locale is supported, false otherwise.
-   */
   private _isSupportedLocale = (locale: string): boolean => {
     if (localization.getLocales().includes(locale) || locale === 'en') {
       return true;
     }
     return false;
   }
-    /**
-   * Sets the Czech translations - temp until the translations get merged to surveyjs repo.
-   * @private
-   */
   private setCzechTranslations() {
     //@ts-ignore
     localization.locales['cs'] = CZ_TRANSLATIONS;

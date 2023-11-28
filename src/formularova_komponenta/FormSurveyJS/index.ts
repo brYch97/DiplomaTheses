@@ -76,7 +76,7 @@ export class FormSurveyJS implements ComponentFramework.StandardControl<IInputs,
                 })();
             }
         }
-        //input mode  - !context.parameters.mode.raw is null in case of full page control
+        //input mode
         if (!context.parameters.mode.raw || context.parameters.mode.raw === SurveyType.ClientInput) {
             ReactDOM.render(React.createElement(Input, {
                 schema: this._templateSchema ? merge(this._templateSchema, this._schema) : this._schema,
@@ -135,6 +135,13 @@ export class FormSurveyJS implements ComponentFramework.StandardControl<IInputs,
         this._notifyOutputChanged();
     }
 
+    /**
+     * Retrieves the questions for a template.
+     * 
+     * @param entityName - The name of the entity.
+     * @param entityId - The ID of the entity.
+     * @returns A promise that resolves to the response containing the questions.
+     */
     private async _getQuestionsForTemplate(entityName: string, entityId: string): Promise<ComponentFramework.WebApi.RetrieveMultipleResponse> {
         const fetchXml = `<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='true'>
         <entity name='${this._fieldEntityName}'>
@@ -153,6 +160,10 @@ export class FormSurveyJS implements ComponentFramework.StandardControl<IInputs,
         return await this._context.webAPI.retrieveMultipleRecords(this._fieldEntityName, `?fetchXml=${encodeURIComponent(fetchXml)}`);
     }
 
+    /**
+     * Retrieves multiple records from the web API based on the schema and returns the response.
+     * @returns A promise that resolves to a RetrieveMultipleResponse object or undefined.
+     */
     private async _getQuestionsForInput(): Promise<ComponentFramework.WebApi.RetrieveMultipleResponse | undefined> {
         const questionIds: string[] = [];
         filterDeep(this._schema, (value, key) => {
@@ -168,6 +179,11 @@ export class FormSurveyJS implements ComponentFramework.StandardControl<IInputs,
         return await this._context.webAPI.retrieveMultipleRecords(this._fieldEntityName, `?$select=${this._schemaAttributeName}&$filter=${questionIds.map(id => `${this._customFieldPrimaryIdAttribute} eq ${id.split('field-')[1]}`).join(' or ')}`);
     }
 
+    /**
+     * Retrieves the survey schema based on the provided binded schema and the current mode.
+     * @param bindedSchema The binded schema, if available.
+     * @returns A promise that resolves to an array containing the survey schema and an optional template schema.
+     */
     private async _getSurveySchema(bindedSchema: ISchema | null): Promise<[ISchema, ISchema?]> {
         switch (this._context.parameters.mode.raw) {
             case SurveyType.FieldDesigner: {
@@ -209,6 +225,10 @@ export class FormSurveyJS implements ComponentFramework.StandardControl<IInputs,
         }
     }
 
+    /**
+     * Initializes the survey.
+     * @returns {Promise<void>} A promise that resolves once the survey is initialized.
+     */
     private async initializeSurvey() {
         this._surveyInitialized = true;
         SurveyLocalizationService.init(this._context.userSettings, this._context.resources);
@@ -284,6 +304,11 @@ export class FormSurveyJS implements ComponentFramework.StandardControl<IInputs,
         this._surveyLoaded = true;
         this.updateView(this._context);
     }
+    /**
+     * Retrieves pre-filled fields based on the provided schema.
+     * @param schema - The schema object used to determine the fields to pre-fill.
+     * @returns A promise that resolves to an object containing the pre-filled fields.
+     */
     private async _getPrefilledFields(schema: ISchema): Promise<IDictionary> {
         const getUserDataProp = (propName: string) => {
             for (const [key, value] of Object.entries(userData)) {

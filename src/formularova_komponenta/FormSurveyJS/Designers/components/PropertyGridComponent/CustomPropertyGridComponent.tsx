@@ -12,10 +12,7 @@ export interface ICustomPropertyGridComponentChild {
 }
 
 /**
- * @function CustomPropertyGridComponent
- * @description Functional component that renders the content of custom property grid item.
- * @param {ICustomPropertyGridComponent} props - The properties for the CustomPropertyGridComponent.
- * @returns {React.FC} The CustomPropertyGridComponent.
+ * Functional component that renders the content of custom property grid item.
  */
 export const CustomPropertyGridComponent: React.FC<ICustomPropertyGridComponent> = (props) => {
     const [

@@ -40,82 +40,36 @@ export class SurveyManager {
     private _surveyType: SurveyType;
     private _isFullPageControl: boolean;
     private _pcfContext: ComponentFramework.Context<IInputs>
-    /**
- * Gets the theme service.
- * @returns {SurveyThemeService} The theme service.
- */
-    /**
-     * Gets the theme service.
-     * @returns {SurveyThemeService} The theme service.
-     */
     public static get ThemeService() {
         return SurveyManager._instance?._surveyThemeService;
     }
-    /**
-     * Gets the change service.
-     * @returns {SurveyChangesService} The change service.
-     */
     public static get ChangeService() {
         return SurveyManager._instance?._surveyChangesService
     }
-    /**
- * Gets the custom question service.
- * @returns {SurveyCustomQuestionService} The custom question service.
- */
     public static get CustomQuestionService() {
         return SurveyManager._instance?._surveyCustomQuestionService;
     }
-    /**
-* Gets the custom control service.
-* @returns {CustomControlService} The custom control service.
-*/
     public static get CustomControlService() {
         return SurveyManager._instance?._surveyCustomControlService;
     }
-    /**
-* Gets the localization service.
-* @returns {SurveyLocalizationService} The localization service.
-*/
     public static get LocalizationService() {
         return SurveyManager._instance?._localizationService
     }
-    /**
- * Gets the current mode of the PCF.
- * @returns {SurveyType} The survey type.
- */
     public static get SurveyType() {
         return SurveyManager._instance?._surveyType;
     }
-    /**
- * Checks if the PCF is a full page.
- * @returns {boolean} True if the survey is a full page, false otherwise.
- */
     public static get IsFullPage() {
         return SurveyManager._instance?._isFullPageControl;
     }
-    /**
- * Gets the PCF context.
- * @returns {ComponentFramework.Context<IInputs>} The PCF context.
- */
     public static get PcfContext() {
         return SurveyManager._instance?._pcfContext
     }
-    /**
-     * Constructs a new instance of the SurveyManager.
-     * @param {ComponentFramework.Context<IInputs>} context - The PCF context.
-     */
     private constructor(context: ComponentFramework.Context<IInputs>) {
         this._surveyType = context.parameters.mode.raw as any ?? SurveyType.ClientInput;
         //!context.parameters.mode.raw is null in case of full page control
         this._isFullPageControl = context.parameters.mode.raw ? false : true;
         this._pcfContext = context;
     }
-    /**
-  * Initializes the SurveyManager.
-  * @param {ISchema} surveySchema - The survey schema.
-  * @param {ComponentFramework.Context<IInputs>} context - The PCF context.
-  * @param {ISchema} [templateSchema] - The template schema.
-  */
     public static init(surveySchema: ISchema, context: ComponentFramework.Context<IInputs>, templateSchema?: ISchema) {
         if (this._instance) {
             throw new Error('Another Survey has previously been initialized. Please clear it first with SurveyService.clear()');
@@ -150,11 +104,6 @@ export class SurveyManager {
         //@ts-ignore - is only null until the survey is reinitialized => will always be set during survey runtime
         this._instance = null;
     }
-    /**
- * Sets the stored schema.
- * @param {ISchema} surveySchema - The survey schema.
- * @param {ISchema} [templateSchema] - The template schema.
- */
     public static setStoredSchema(surveySchema: ISchema, templateSchema?: ISchema) {
         const service = SurveyManager._instance;
         if (!service) {

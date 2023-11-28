@@ -10,10 +10,7 @@ interface ILanguageSelector {
 }
 
 /**
- * @function LanguageSelector
- * @description Functional component that creates a dropdown menu for language selection.
- * @param {ILanguageSelector} props - The properties for the LanguageSelector component.
- * @returns {React.FC} The LanguageSelector component.
+ * Functional component that creates a dropdown menu for language selection..
  */
 export const LanguageSelector: React.FC<ILanguageSelector> = (props) => {
     return (

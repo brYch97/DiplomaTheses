@@ -19,7 +19,9 @@ export const getDefaultSurveySchema = (): ISchema => {
     }
     return schema;
 }
-
+/**
+ * Functional component that creates a survey designer for form.
+ */
 export const SurveyDesigner: React.FC<IDesignerProps> = (props) => {
     const creator = React.useMemo(() => {
         return props.onCreatorInitialization({

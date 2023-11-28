@@ -68,10 +68,7 @@ const DEFAULT_CREATOR_OPTIONS: ICreatorOptions = {
 }
 
 /**
- * @function Designer
- * @description Functional component that is used by all creators.
- * @param {IDesignerProps} props - The properties for the Designer component.
- * @returns {React.FC} The Designer component.
+ *  Functional component that serves as a base for all creators.
  */
 
 export const Designer: React.FC<IDesignerWrapper> = (props) => {

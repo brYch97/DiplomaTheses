@@ -21,10 +21,7 @@ const viewerProps = {
     },
 };
 /**
- * @function JSONDiffComponent
- * @description Functional component that creates a viewer for JSON differences in schema.
- * @param {IJSONDiffComponent} props - The properties for the JSONDiffComponent.
- * @returns {React.FC} The JSONDiffComponent.
+ * Functional component that creates a viewer for JSON differences in schema.
  */
 export const JSONDiffComponent: React.FC<IJSONDiffComponent> = (props) => {
     const diffRef = React.useRef(new Differ({

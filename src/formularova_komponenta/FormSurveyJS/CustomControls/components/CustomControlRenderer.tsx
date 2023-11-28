@@ -10,6 +10,9 @@ interface ICustomControlRendererProps {
   [key: string]: any;
 }
 
+/**
+ * Renders a custom control component.
+ */
 export const CustomControlRenderer: React.FC<ICustomControlRendererProps> = (props) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const factory = props.customControl.parentContext.factory as INestedPcfFactory;
@@ -40,7 +43,7 @@ export const CustomControlRenderer: React.FC<ICustomControlRendererProps> = (pro
     const component = factory.createComponent(customControl.name, customControlInstanceId, getProperties());
     factory.bindDOMElement(component, containerRef.current as Element);
   }
-
+  //gets the value of both static and bound properties
   const getPropertyValue = (property: CustomControlProperty) => {
     if (property.usage === "input") {
       return props.question[property.nameSurveyJS];
@@ -62,6 +65,7 @@ export const CustomControlRenderer: React.FC<ICustomControlRendererProps> = (pro
         Type: property.ofType,
         Value: getPropertyValue(property),
         Usage: 3,
+        //sets the bounded property value as the value of the SurveyJS question
         Callback: (value: string) => {
           if(property.usage === 'input' || !property.isBindingProperty) {
             return;

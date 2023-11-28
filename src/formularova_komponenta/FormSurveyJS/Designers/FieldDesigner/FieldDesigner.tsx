@@ -25,10 +25,7 @@ export const getDefaultCustomFieldSchema = (): ISchema => {
 }
 
 /**
- * @function FieldDesigner
- * @description Functional component that creates a survey designer for custom fields.
- * @param {IDesignerProps} props - The properties for the FieldDesigner component.
- * @returns {React.FC} The FieldDesigner component.
+ * Functional component that creates a survey designer for custom fields.
  */
 export const FieldDesigner: React.FC<IDesignerProps> = (props) => {
     const styles = React.useMemo(() => fieldDesignerStyles, [])

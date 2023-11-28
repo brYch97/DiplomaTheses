@@ -1,6 +1,9 @@
 import { DataType } from "../interfaces/Manifest";
 import { CustomControlPropertyValue } from "./CustomControlPropertyValue";
 
+/**
+ * Represents a custom control property.
+ */
 export class CustomControlProperty {
     public name: string;
     public nameSurveyJS: string;

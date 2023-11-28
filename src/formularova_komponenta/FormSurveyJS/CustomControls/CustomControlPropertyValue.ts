@@ -1,6 +1,7 @@
-import { localization } from "survey-creator-react";
 
-
+/**
+ * Represents a possible value of a custom control property (enum only).
+ */
 export class CustomControlPropertyValue {
     public name: string;
     public default: boolean;
