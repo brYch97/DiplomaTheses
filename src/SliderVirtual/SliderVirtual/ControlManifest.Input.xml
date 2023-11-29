@@ -3,40 +3,40 @@
     namespace="Sample"
     constructor="SliderVirtual"
     version="0.0.1"
-    display-name-key="Sample_slider_component_Display_Key"
-    description-key="Sample_slider_component_Desc_Key"
+    display-name-key="Silder virtual"
+    description-key="Ukázková virtuální field komponenta"
     control-type="virtual">
     <property name="step"
-      display-name-key="Step_Display_Key"
-      description-key="Step_Desc_Key"
-      of-type-group="numbers"
-      usage="input"
-      default-value="1"
-      required="false" />
-      <type-group name="numbers">
-        <type>Decimal</type>
-        <type>Whole.None</type>
-      </type-group>
-    <property name="min"
-      display-name-key="Minimal_value_Display_Key"
-      description-key="Minimal_value_Desc_Key"
-      of-type-group="numbers"
-      usage="input"
-      default-value="0"
-      required="false" />
-    <property name="max"
-      display-name-key="Maximum_value_Display_Key"
-      description-key="Maximum_value_Desc_Key"
-      of-type-group="numbers"
-      usage="input"
-      default-value="100"
-      required="false" />
-    <property name="value"
-      display-name-key="Slider_value_Display_Key"
-      description-key="Slider_value_Desc_Key"
-      of-type-group="numbers"
-      usage="bound"
-      required="true" />
+    display-name-key="Krok"
+    description-key=""
+    of-type-group="numbers"
+    usage="input"
+    default-value="1"
+    required="false" />
+  <type-group name="numbers">
+    <type>Decimal</type>
+    <type>Whole.None</type>
+  </type-group>
+  <property name="min"
+    display-name-key="Minimální hodnota"
+    description-key=""
+    of-type-group="numbers"
+    usage="input"
+    default-value="0"
+    required="false" />
+  <property name="max"
+    display-name-key="Maximální hodnota"
+    description-key=""
+    of-type-group="numbers"
+    usage="input"
+    default-value="100"
+    required="false" />
+  <property name="value"
+    display-name-key="Hodnota posuvníku"
+    description-key=""
+    of-type-group="numbers"
+    usage="bound"
+    required="true" />
     <resources>
       <code path="index.ts" order="1" />
       <resx path="localization/translations.1029.resx" version="1.0.0" />

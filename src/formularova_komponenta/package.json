@@ -1,7 +1,7 @@
 {
-  "name": "form_component",
+  "name": "formsurveyjs",
   "version": "1.0.0",
-  "description": "Project containing your PowerApps Component Framework (PCF) control.",
+  "description": "Component that can be used for creating interactive surveys",
   "scripts": {
     "build": "pcf-scripts build",
     "clean": "pcf-scripts clean",

@@ -8,7 +8,7 @@
     control-type="standard">
     <property name="step"
       display-name-key="Krok"
-      description-key="..."
+      description-key=""
       of-type-group="numbers"
       usage="input"
       default-value="1"
@@ -19,7 +19,7 @@
     </type-group>
     <property name="min"
       display-name-key="Minimální hodnota"
-      description-key="..."
+      description-key=""
       of-type-group="numbers"
       usage="input"
       default-value="0"
@@ -33,7 +33,7 @@
       required="false" />
     <property name="value"
       display-name-key="Hodnota posuvníku"
-      description-key="..."
+      description-key=""
       of-type-group="numbers"
       usage="bound"
       required="true" />
