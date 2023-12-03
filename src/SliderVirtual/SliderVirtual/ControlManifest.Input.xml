@@ -3,7 +3,7 @@
     namespace="Sample"
     constructor="SliderVirtual"
     version="0.0.1"
-    display-name-key="Silder virtual"
+    display-name-key="Slider virtual"
     description-key="Ukázková virtuální field komponenta"
     control-type="virtual">
     <property name="step"
