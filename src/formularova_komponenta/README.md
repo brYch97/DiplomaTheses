@@ -1,10 +1,4 @@
 
-<style>
-    .tsd-page-title {
-        display: none;
-    }
-</style>
-
 # FormSurveyJS PCF
 
 This PCF allows you to create interactive forms that can include other PCF components. The PCF also supports prefilling user information based on the JSON provided in the `br_identityclaim` field in the `Contact` table. 
